@@ -1,3 +1,30 @@
-body {
-background-image: url(Bakgrunn.png);
-}
+		body {
+			background-image: url(Bakgrunn.png);
+		}
+
+		footer { position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100px;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover {
+			color: darkcyan;
+			font-size: 105%;
+		}
+
+		a:active {
+			color: darkcyan;
+		}
