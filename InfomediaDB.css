@@ -1,7 +1,25 @@
+		/* Midlertidig bakgrunnsbilde */
 		body {
 			background-image: url(Bakgrunn.png);
 		}
 
+		/* Forsøk på å lage box, se flexbox fra forelesning */
+		.left {
+			display: flex;
+			flex-direction: column;
+			align-self: left;
+			flex: 1;
+		}
+
+		/* Forsøk på å lage box, se flexbox fra forelesning */
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: right;
+			flex: 1;
+		}
+
+		/* Bør oppdateres med flexbox i stedet. */
 		footer { position: absolute;
 			left: 0;
 			bottom: 0;
@@ -10,21 +28,28 @@
 			overflow: hidden;
 		}
 
+		/* Fjerner linje under linker og fjerner blåfargen */
 		a:link {
 			text-decoration: none;
 			color: black;
 		}
 
+		/* Gjør at teksten ikke er lilla for å indikere at
+		den er trykket på tidligere. */
 		a:visited {
 			text-decoration: none;
 			color: black;
 		}
 
+		/* Indikerer at linken er trykkbar ved å endre farge
+		og øke skriftstørrelsen med 5%. */
 		a:hover {
 			color: darkcyan;
 			font-size: 105%;
 		}
 
+		/* Sørger for at teksten har samme farge når man trykker på den
+		som når man holder musen over linken. */
 		a:active {
 			color: darkcyan;
 		}
