@@ -1,11 +1,28 @@
 		/* Midlertidig bakgrunnsbilde */
 		body {
 			background-image: url(Bakgrunn.png);
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			height: 100%;
 		}
 
 		body {
-			overflow-x: hidden;
-			overflow-y: scroll;
+			display: flex;
+			flex-direction: column;
+			min-height: 100%;
+		}
+
+		.MainContent {
+			flex: 1;
+			color: #333;
+			padding: .5rem;
+		}
+
+		.Footer {
+			padding: .5rem;
 		}
 
 		.FlexWrapper {
@@ -34,35 +51,3 @@
 
 
 
-		/* Bør oppdateres med flexbox i stedet. */
-		footer { position: absolute;
-			left: 0;
-			bottom: 0;
-			height: 100px;
-			width: 100%;
-			overflow: hidden;
-		}
-
-		/* Fjerner linje under linker og fjerner blåfargen */
-		a:link {
-			text-decoration: none;
-			color: black;
-		}
-
-		/* Gjør at teksten ikke er lilla for å indikere at
-		den er trykket på tidligere. */
-		a:visited {
-			text-decoration: none;
-			color: black;
-		}
-
-		/* Indikerer at linken er trykkbar ved å endre farge på teksten*/
-		a:hover {
-			color: darkcyan;
-		}
-
-		/* Sørger for at teksten har samme farge når man trykker på den
-		som når man holder musen over linken. */
-		a:active {
-			color: darkcyan;
-		}
