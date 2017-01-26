@@ -3,20 +3,20 @@
 			background-image: url(Bakgrunn.png);
 		}
 
+		aside {
 		/* Forsøk på å lage box, se flexbox fra forelesning */
 		.left {
 			display: flex;
-			flex-direction: column;
-			align-self: left;
-			flex: 1;
+			align-items: left;
+			justify-content: left;
 		}
 
 		/* Forsøk på å lage box, se flexbox fra forelesning */
 		.right {
 			display: flex;
-			flex-direction: column;
 			align-items: right;
-			flex: 1;
+			justify-content: right;
+			}
 		}
 
 		/* Bør oppdateres med flexbox i stedet. */
@@ -41,11 +41,9 @@
 			color: black;
 		}
 
-		/* Indikerer at linken er trykkbar ved å endre farge
-		og øke skriftstørrelsen med 5%. */
+		/* Indikerer at linken er trykkbar ved å endre farge på teksten*/
 		a:hover {
 			color: darkcyan;
-			font-size: 105%;
 		}
 
 		/* Sørger for at teksten har samme farge når man trykker på den
