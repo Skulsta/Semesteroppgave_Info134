@@ -1,53 +1,70 @@
-		/* Midlertidig bakgrunnsbilde */
-		body {
-			background-image: url(Bakgrunn.png);
-			margin: 0;
-			padding: 0;
-		}
+html {
+	font-family: "Arsenal", "Times New Roman";
+	height: 100%;
+}
+body {
+	background: white;
+	margin: 0;
+	padding: 0;
+}
 
-		html {
-			height: 100%;
-		}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
 
-		body {
-			display: flex;
-			flex-direction: column;
-			min-height: 100%;
-		}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: lightgray;
+	height: 50px;
+}
 
-		.MainContent {
-			flex: 1;
-			color: #333;
-			padding: .5rem;
-		}
+#search {
 
-		.Footer {
-			padding: .5rem;
-		}
+}
 
-		.FlexWrapper {
-			background-color: blue;
-			display: flex;
-			justify-content: space-between;
-			height: 200px;
-			width: 100%;
-		}
+main {
+	display: flex;
+	flex: 1;
+	justify-content: space-around;
+	align-items: center;
+	padding: .5rem;
+}
 
-		.FlexItems {
-			background-color: green;
-			border: 1px solid #ebebeb;
-			display: flex;
-			height: 100px;
-		}
+.panel {
+	min-height: 100%;
+	flex: 1;
+}
 
-		.Middle {
-			flex: 1.5 0 auto;
-		}
-
-		.Left,
-		.Right {
-			flex: 1 0 auto;
-		}
+.main-content {
+	background: white;
+	flex-grow: 2;
+	order: 2;
+}
 
 
+aside {
+	display: flex;
+	flex-direction: column;
+}
 
+.left {
+	background: #30F6EB;
+	order: 1;
+}
+
+.right {
+	background: #52FA41;
+	order: 3;
+}
+
+footer {
+	background: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+}
