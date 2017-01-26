@@ -3,21 +3,36 @@
 			background-image: url(Bakgrunn.png);
 		}
 
-		aside {
-		/* Forsøk på å lage box, se flexbox fra forelesning */
-		.left {
-			display: flex;
-			align-items: left;
-			justify-content: left;
+		body {
+			overflow-x: hidden;
+			overflow-y: scroll;
 		}
 
-		/* Forsøk på å lage box, se flexbox fra forelesning */
-		.right {
+		.FlexWrapper {
+			background-color: blue;
 			display: flex;
-			align-items: right;
-			justify-content: right;
-			}
+			justify-content: space-between;
+			height: 200px;
+			width: 100%;
 		}
+
+		.FlexItems {
+			background-color: green;
+			border: 1px solid #ebebeb;
+			display: flex;
+			height: 100px;
+		}
+
+		.Middle {
+			flex: 1.5 0 auto;
+		}
+
+		.Left,
+		.Right {
+			flex: 1 0 auto;
+		}
+
+
 
 		/* Bør oppdateres med flexbox i stedet. */
 		footer { position: absolute;
