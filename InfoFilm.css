@@ -1,10 +1,11 @@
 html {
-	font-family: "Arsenal", "Times New Roman";
+	font-family: "Helvetica", "Times New Roman";
 }
 
 main {
+	display: flex;
 	width: 65%;
-	background: #00cc6c;
+	background: #D3D3D3;
 	justify-content: space-around;}
 
 .overskrift {
