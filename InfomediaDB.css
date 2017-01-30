@@ -56,7 +56,7 @@ main {
 
 .panel {
 	flex: 1;
-	height: 100vw;
+	height: 100vh;
 }
 
 .main-content {
@@ -87,17 +87,15 @@ a:visited {
 }
 
 a:hover {
-	color: darkcyan;
+	color: grey;
 }
 
 a:active {
-	color: darkcyan;
+	color: grey;
 }
 
 footer {
 	background: lightgray;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: .5rem;
 }
