@@ -16,14 +16,25 @@ body {
 
 header {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	background: lightgray;
 	height: 50px;
+	width: 100vw;
+	justify-content: space-between;
 }
 
-#search {
+.infomedia-banner {
+	display: flex;
+	align-self: flex-start;
+	margin-left: 10px;
+	margin-top: 10px;
+}
 
+.search {
+}
+
+.sok {
+	margin-right: 10px;
+	margin-top: 10px;
 }
 
 main {
