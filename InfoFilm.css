@@ -1,0 +1,21 @@
+html {
+	font-family: "Arsenal", "Times New Roman";
+}
+
+main {
+	width: 65%;
+	background: #00cc6c;
+	justify-content: space-around;}
+
+.overskrift {
+
+}
+
+.bilde {
+	width: 220;
+	height: 315;
+}
+
+.info {
+	list-style-type: none;
+}
