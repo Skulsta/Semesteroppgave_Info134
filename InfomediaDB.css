@@ -46,8 +46,8 @@ main {
 }
 
 .panel {
-	height: 500px;
 	flex: 1;
+	height: 100vw;
 }
 
 .main-content {
@@ -56,11 +56,6 @@ main {
 	order: 2;
 }
 
-
-aside {
-	display: flex;
-	flex-direction: column;
-}
 
 .left {
 	background: #30F6EB;
