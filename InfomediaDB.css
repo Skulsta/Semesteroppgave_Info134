@@ -29,10 +29,19 @@ header {
 	margin-top: 10px;
 }
 
+.sokbar {
+	margin-left: auto;
+}
+
 .search {
 }
 
 .sok {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.avansertsok {
 	margin-right: 10px;
 	margin-top: 10px;
 }
@@ -65,6 +74,24 @@ main {
 .right {
 	background: #52FA41;
 	order: 3;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: darkcyan;
+}
+
+a:active {
+	color: darkcyan;
 }
 
 footer {
