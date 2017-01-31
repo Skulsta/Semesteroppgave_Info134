@@ -21,26 +21,99 @@
 
 	<body>
 
-		<header class="bar">
+		<!--header med hjemknapp og søkfunksjon-->
+		<header>
 			<nav class="hjemLink">
-				<img class="infomedia-banner" href="InfomediaDB.html" src="infomedia-banner.gif" alt="infomedia-logo"/>
+				<a href="InfomediaDB.html">
+					<img class="infomedia-banner" src="infomedia-banner.gif" alt="infomedia-logo"/>
+				</a>
 			</nav>
 
 			<nav class="søk">
 				<input class="searchInput" type="search" placeholder="Søk...">
 				<input class="søkButton" type="submit" value="Søk">
-				<a class="avansertsok" href="#"> Avansert søk </a>
 			</nav>
 		</header>
 
 		<main>
 			<aside class="aside">
-				Sidebar
+				<!--skuespiller bilder som er lenket til skuespiller side-->
+				<section class="skuespiller">
+					<a href="#">
+						<img class="skuespillerBilde" href="#" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/François_Cluzet.jpg" alt="François Cluzet">
+					</a>
+					<a href="#">François Cluzet</a>
+				</section>
+
+				<section class="skuespiller">
+					<a href="http://www.imdb.com/name/nm1082477/?ref_=tt_cl_t2">
+						<img class="skuespillerBilde" href="http://www.imdb.com/name/nm1082477/?ref_=tt_cl_t2" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Omar_Sy.jpg" alt="Omar Sy">
+					</a>
+					<a href="#">Omar Sy</a>
+				</section>
+
+				<section class="skuespiller">
+					<a href="#">
+						<img class="skuespillerBilde" href="#" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Audrey_Fleurot.jpg" alt="Audrey Fleurot">
+					</a>
+					<a href="#">Audrey Fleurot</a>
+				</section>
+
+				<section class="skuespiller">
+					<a href="#">
+						<img class="skuespillerBilde" href="#" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Anne_Le_Ny.png" alt="Anne Le Ny">
+					</a>
+					<a href="#">Anne Le Ny</a>
+				</section>
+
+				<section class="skuespiller">
+					<a href="#">
+						<img class="skuespillerBilde" href="#" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Joséphine_de_Meaux.png" alt="Joséphine de Meaux">
+					</a>
+					<a href="#">Joséphine de Meaux</a>
+				</section>
 			</aside>
 
 			<section class="mainSection">
-				<!--Cover bilde The Intouchables-->
-				<img class="bilde" src="Bilder/The_Intouchables/The_Intouchables_3.jpg" alt="The Intouchables">
+
+				<section class="Bilder">
+					<!--Cover bilde The Intouchables-->
+					<img class="forsideBilde" src="Filmer/The_Intouchables/The_Intouchables_3.jpg" alt="The Intouchables">
+
+					<figure class="ikonKnapp">
+						<a class="knappLink" href="#">
+							<img class="ikon" src="hjerteIkon.png">
+							<a href="#">Legg til i min liste</a>
+						</a>
+					</figure>
+				</section>
+				<section class="Info">
+					<p class="overskrift">The Intouchables</p>
+					<p>År: 2011 (112 minutter)
+					<br/>
+					Regissør: Olivier Nakache / Eric Toledano
+					<br/>
+					Norsk tittel: De Urørlige
+					<br/>
+					Genre: drama, biografi, komedie
+					<br/>
+					Land: Frankrike
+					<br/>
+					Språk: Fransk
+					</p>
+					
+					<p>Den sanne historien om to menn som aldri skulle ha møtt hverandre - De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
+					<br/><br/>
+					Mangemillionæren Philippe er lam fra nakken og ned etter en paragliderulykke, og må leve resten av livet i rullestol. Han bor i luksuriøse omgivelser i Paris og skal ansette en ny pleieassistent. Den eneste av søkerne som skiller seg ut er Driss - den unge mannen som har levert søknaden kun fordi han må vise at han er aktiv arbeidssøker for å beholde trygdepengene. Snart begynner et usannsynlig kameratskap forankret i ærlighet og humor mellom to individer som på overflaten ikke ville hatt noe til felles.
+					<br/><br/>
+					De Urørlige er basert på en utrolig, men sann historie. Filmen, som er sett av 20 millioner franskmenn, har blitt et internasjonalt fenomen og er den mest inntjenende ikke-engelskspråklige filmen i historien.
+					</p>
+			</section>
+
+				<section>
+				<!--Youtube trailer til The Intouchables-->
+					<iframe class="video" src="https://www.youtube.com/embed/34WIbmXkewU" frameborder="0" allowfullscreen></iframe>
+				</section>
 			</section>
 		</main>
 
