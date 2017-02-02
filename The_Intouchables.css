@@ -31,7 +31,6 @@ header {
 
 main {
 	display: flex;
-	flex-grow: 1;
 	flex-direction: column;
 }
 
@@ -127,47 +126,52 @@ footer {
 	background-color: lightblue;
 	color: white;
 	border-top: 5px;
-	border-color: black;
 }
 
 @media (min-width: 768px) {
 
-	body {
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
-
-	.bar {
-		display: flex;
-		background-color: lightgray;
-		color: white;
-		justify-content: flex-end;
-	}
-
-	.infomedia-banner {
-		display: none;
-	}
-
-	.searchInput {
-		width: 50%;
-	}
 
 	main {
 		display: flex;
-		flex-grow: 1;
-		background-color: pink;
-		flex-direction: column;
-	}
-	
-	.aside {
-		background-color: lightblue;
-		width: 50px;
-		order: 2;
+		flex-direction: row;
 	}
 
-	.bilde {
-		height: 315px;
-		width: 200px;
+	.mainSection {
+		display: flex;
+		background-color: white;
+		flex-direction: row;
+		order: 1;
+		flex-grow: 1
 	}
+
+	.Info {
+		width: 50%;
+	}
+
+	.aside {
+		display: flex;
+		order: 2;
+		flex-direction: column;
+		padding-bottom: 5px;
+		justify-content: flex-start;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+
+	.skuespiller {
+		margin-top: 10px;
+		width: 70px;
+		justify-content: center;
+	}
+
+	.skuespillerBilde {
+		height: 100px;
+		width: 70px;
+	}
+
+	.forsideBilde {
+		height: 315px;
+		width: 230px;
+	}
+
 }
