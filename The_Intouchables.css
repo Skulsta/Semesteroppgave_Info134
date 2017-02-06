@@ -44,6 +44,7 @@ main {
 .bilder {
 	order: -1;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .forsideBilde {
@@ -69,6 +70,7 @@ main {
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 5px;
+	order: 2;
 
 }
 
@@ -142,7 +144,7 @@ footer {
 		flex-direction: column;
 		margin-left: 10px;
 		justify-content: flex-start;
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 
 	.skuespiller {
