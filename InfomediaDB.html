@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
+
 		<meta charset="utf-8" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<meta name = "description" content ="Infomedia MediaDB">
+
 		<meta name = "author" content ="Vegar Ellingsen og Stian Skulstad">
 
-
 		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+
 		<link rel="stylesheet" href="InfomediaDB.css">
+
 		<title>InfomediaDB</title>
+	
 	</head>
-			<body>
 
-				<header>
+	<body>
 
-				<img class="infomedia-banner" href="InfomediaDB.html" src="infomedia-banner.gif" alt="infomedia-logo"/>
+		<!--header med hjemknapp og søkfunksjon-->
+		<header>
+			<nav class="hjemLink">
+				<a href="InfomediaDB.html">
+					<img class="infomedia-banner" src="infomedia-banner.gif" alt="infomedia-logo"/>
+				</a>
+			</nav>
 
-				<form class=sokbar>
-					<input class="search" type="text" name="Søk" value="Søk...">
-					<input class="sok" type="submit" value="Søk">
-				</form>
-
-				<a class="avansertsok" href="#"> Avansert søk </a>
-				</header>
+			<nav class="søk">
+				<input class="searchInput" type="search" placeholder="Søk...">
+				<input class="søkButton" type="submit" value="Søk">
+			</nav>
+		</header>
 
 				<main>
-					<section class="panel main-content"><span> Sist returnerte filmer <span> </section>
-					<aside class="panel left">Nyeste filmer</aside>
-					<aside class="panel right">Online</aside>
+					<section class="main-content">
+						<h3> Sist returnerte filmer </h3>
+						<section class="main-bilder"> 
+							<img class="forsideBilde" src="Filmer/The_Intouchables/The_Intouchables_3.jpg" alt="The Intouchables"> 
+							<img class="forsideBilde" src="Filmer/Valkyrie/valkyrie_1.jpg" alt="The Intouchables"> 
+						</section>
 
-
-
+					</section>
+					<aside class="left">
+					<h3> Nyeste filmer </h3>
+						<section class="left-bilder">
+							<img class="forsideBilde" src="Filmer/The_Intouchables/The_Intouchables_4.jpg" alt="The Intouchables"> 
+						</section>
+						</aside>
+					<aside class="right">
+						<h3> Online </h3>
+						<section class="right-bilder">
+							<img class="forsideBilde" src="Filmer/Valkyrie/valkyrie_3.jpg" alt="The Intouchables"> 
+						</section>
+					</aside>
 				</main>
 
-				<footer>Kontaktinformasjon: InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
+				<footer>Kontaktinformasjon : InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
 
 			</body>
 		</html>
