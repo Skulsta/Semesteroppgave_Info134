@@ -1,101 +1,160 @@
-html {
-	font-family: "Arsenal", "Times New Roman";
-	height: 100%;
-}
-body {
-	background: white;
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	height: 100vh;
 }
 
 header {
 	display: flex;
-	background: lightgray;
-	height: 50px;
-	width: 100vw;
+	background-color: #f1f1f1;
+	color: white;
 	justify-content: space-between;
+	padding-bottom: 5px;
 }
 
 .infomedia-banner {
-	display: flex;
-	align-self: flex-start;
-	margin-left: 10px;
-	margin-top: 10px;
+	height: 12px;
+	width: 180px;
 }
 
-.sokbar {
-	margin-left: auto;
+.searchInput {
+	border-radius: 15px;
+	border: 1px;
+	width: 60px;
 }
 
-.search {
-}
-
-.sok {
-	margin-right: 10px;
-	margin-top: 10px;
-}
-
-.avansertsok {
-	margin-right: 10px;
-	margin-top: 10px;
+.søkButton {
+	border-radius: 15px;
+	border: 1px;
 }
 
 main {
 	display: flex;
-	flex: 1;
-	justify-content: space-around;
-	align-items: center;
-	padding: .5rem;
-}
-
-.panel {
-	flex: 1;
-	height: 100vh;
+	flex-grow: 1;
+	flex-direction: column;
 }
 
 .main-content {
-	background: white;
-	flex-grow: 2;
-	order: 2;
+	flex: 1;
+	background-color: grey;
+	padding: 10px;
 }
 
+.main-bilder {
+	display: flex;
+	justify-content: space-between;
+}
+
+.left-bilder {
+	display: flex;
+	justify-content: space-between;
+}
+
+.right-bilder {
+	display: flex;
+	justify-content: space-between;
+}
 
 .left {
-	background: #30F6EB;
-	order: 1;
+	flex: 1;
+	background-color: cyan;
+	padding: 10px;
 }
 
 .right {
-	background: #52FA41;
-	order: 3;
+	flex: 1;
+	background-color: orange;
+	padding: 10px;
+}
+
+.forsideBilde {
+	height: 100px;
+	width: 75px;
 }
 
 a:link {
 	text-decoration: none;
-	color: black;
 }
 
-a:visited {
-	text-decoration: none;
-	color: black;
+.ikon {
+	height: 30px;
+	width: 30px;
 }
 
-a:hover {
-	color: grey;
+
+.overskrift {
+	font-weight: bold;
 }
 
-a:active {
-	color: grey;
+.info {
+	order: 2;
+}
+
+.aside {
+	display: flex;
+	order: 2;
+	justify-content: space-around;
+	padding-bottom: 5px;
 }
 
 footer {
-	background: lightgray;
-	display: flex;
-	padding: .5rem;
+	background-color: lightblue;
+	width: 100%;
+	color: white;
+	border-top: 5px;
+	border-color: black;
+	text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.bar {
+		display: flex;
+		background-color: lightgray;
+		color: white;
+		justify-content: flex-end;
+	}
+
+	.infomedia-banner {
+		display: none;
+	}
+
+	.searchInput {
+		width: 50%;
+	}
+
+	.panel {
+		
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	h3 {
+		width: 100vw;
+		align-items: center;
+	}
+
+	main {
+		flex-wrap: wrap;
+
+	}
+
+	.forsideBilde {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	order: -1;
+}
 }
