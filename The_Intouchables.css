@@ -49,7 +49,6 @@ main {
 	width: 90px;
 	height: 35px;
 	font-size: 12px;
-	order: 0;
 	font-family: helvetica;
 	font-weight: bold;
 	justify-content: space-around;
@@ -58,9 +57,26 @@ main {
 	order: 2;
 }
 
+.star {
+	font-size: 40px;
+}
+
 .vurdering {
-	order: 4;
-	font-size: 50px;
+	display: flex;
+	flex-direction: row;
+	padding: 2px;
+	background-color: #f1f1f1;
+	border-radius: 15px;
+	order: 3;
+	margin-left: 10px;
+	margin-top: 5px;
+	width: 100px;
+	height: 35px;
+	align-items: center;
+	justify-content: space-around;
+	font-family: helvetica;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .forsideInnhold {
@@ -157,6 +173,7 @@ footer {
 
 	.mainSection {
 		flex-direction: column;
+
 	}
 
 	.aside {
