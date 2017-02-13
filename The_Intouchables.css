@@ -1,4 +1,3 @@
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -9,7 +8,7 @@ header {
 	display: flex;
 	background-color: #f1f1f1;
 	justify-content: space-between;
-	padding-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .infomedia-banner {
@@ -26,6 +25,7 @@ header {
 .søkButton {
 	border-radius: 15px;
 	border: 1px;
+	margin-right: 5px;
 }
 
 main {
@@ -39,21 +39,6 @@ main {
 	order: 1;
 	flex-grow: 1;
 	flex-direction: column;
-}
-
-.bilder {
-	order: -1;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.forsideBilde {
-	height: 200px;
-	width: 150px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 5px;
-	order: -1;
 }
 
 .minListeButton {
@@ -71,7 +56,34 @@ main {
 	align-items: center;
 	margin-top: 5px;
 	order: 2;
+}
 
+.vurdering {
+	order: 4;
+	font-size: 50px;
+}
+
+.forsideInnhold {
+	order: -1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.forsideBilde {
+	height: 200px;
+	width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	order: -1;
+}
+
+.video {
+	flex-grow: 1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	order: 3;
+	height: 220px;
 }
 
 a:link {
@@ -89,13 +101,7 @@ a:link {
 
 .info {
 	order: 2;
-}
-
-.video {
-	flex-grow: 1;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	order: 3;
+	font-family: helvetica;
 }
 
 .aside {
@@ -130,10 +136,23 @@ footer {
 
 @media (min-width: 768px) {
 
+	body {
+		display: flex;
+		align-items: center;
+	}
 
 	main {
 		display: flex;
 		flex-direction: row;
+		width: 768px;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%;
 	}
 
 	.mainSection {
@@ -144,7 +163,6 @@ footer {
 		flex-direction: column;
 		margin-left: 10px;
 		justify-content: flex-start;
-		margin-top: 5px;
 	}
 
 	.skuespiller {
@@ -155,8 +173,12 @@ footer {
 
 	.info {
 		order: 4;
-		width: 60%;
-		margin-left: 210px;
+		width: 440px;
+		margin-left: 207px;
+	}
+
+	.overskrift {
+		font-size: 20px;
 	}
 
 	.skuespillerBilde {
@@ -172,12 +194,15 @@ footer {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	.Bilder {
 		height: 315px;
 =======
 	.bilder {
+=======
+	.forsideInnhold {
+>>>>>>> ebaf585759c024ee211baaa68553bb2d8dd7462a
 		flex-wrap: wrap;
-		margin-top: 10px;
 		flex-grow: 1;
 	}
 
@@ -203,5 +228,4 @@ footer {
 		height: 20px;
 		margin-top: 5px;
 	}
-
 }
