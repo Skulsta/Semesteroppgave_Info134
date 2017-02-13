@@ -11,11 +11,13 @@ header {
 	margin-bottom: 10px;
 }
 
+/*Bilde i navbar*/
 .infomedia-banner {
 	height: 12px;
 	width: 180px;
 }
 
+/*søk input*/
 .searchInput {
 	border-radius: 15px;
 	border: 1px;
@@ -39,9 +41,9 @@ main {
 	order: 1;
 	flex-grow: 1;
 	flex-direction: column;
-	align-content: flex-end;
 }
 
+/*Knapp til min liste*/
 .minListeButton {
 	display: flex;
 	padding: 2px;
@@ -59,6 +61,7 @@ main {
 	margin-left: 10px;
 }
 
+/*Box med vurdering og liste knapp*/
 .forsideButtons {
 	display: flex;
 	flex-direction: column;
@@ -112,6 +115,7 @@ main {
 	order: -1;
 }
 
+/*Youtube trailer*/
 .video {
 	flex-grow: 1;
 	padding-top: 5px;
@@ -141,6 +145,7 @@ a:link {
 	padding-bottom: 5px;
 }
 
+/*Gruppe med skuespiller bilder*/
 .skuespiller {
 	font-size: 12px;
 	display: flex;
