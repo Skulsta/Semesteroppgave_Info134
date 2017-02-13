@@ -39,6 +39,7 @@ main {
 	order: 1;
 	flex-grow: 1;
 	flex-direction: column;
+	align-content: flex-end;
 }
 
 .minListeButton {
