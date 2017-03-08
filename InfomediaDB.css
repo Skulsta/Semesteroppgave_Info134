@@ -43,17 +43,8 @@ main {
 
 .main-bilder {
 	display: flex;
-	justify-content: space-between;
-}
-
-.left-bilder {
-	display: flex;
-	justify-content: space-between;
-}
-
-.right-bilder {
-	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-direction: row;
 }
 
 .left {
@@ -69,8 +60,8 @@ main {
 }
 
 .forsideBilde {
-	height: 100px;
-	width: 75px;
+	height: 200px;
+	width: 150px;
 }
 
 a:link {
