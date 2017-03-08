@@ -2,7 +2,6 @@
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 }
 
 header {
@@ -43,8 +42,8 @@ main {
 
 .main-bilder {
 	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
+	
+	flex-wrap: wrap;
 }
 
 .left {
