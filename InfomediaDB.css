@@ -36,31 +36,29 @@ main {
 
 .main-content {
 	flex: 1;
-	background-color: grey;
 	padding: 10px;
 }
 
 .main-bilder {
 	display: flex;
-	
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
 .left {
 	flex: 1;
-	background-color: cyan;
 	padding: 10px;
 }
 
 .right {
 	flex: 1;
-	background-color: orange;
 	padding: 10px;
 }
 
 .forsideBilde {
 	height: 200px;
-	width: 150px;
+	width: 140px;
+	margin: 5px;
 }
 
 a:link {
