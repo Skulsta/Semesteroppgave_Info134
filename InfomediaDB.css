@@ -61,6 +61,15 @@ main {
 	margin: 5px;
 }
 
+.text {
+	display: none;
+}
+
+.forsideBilde:hover, .text { 
+	height: 205px;
+	width: 145px;
+	display: block; }
+
 a:link {
 	text-decoration: none;
 }
