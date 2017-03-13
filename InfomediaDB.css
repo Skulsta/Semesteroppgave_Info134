@@ -9,23 +9,118 @@ header {
 	background-color: #f1f1f1;
 	color: white;
 	justify-content: space-between;
-	padding-bottom: 5px;
+	align-items: center;
 }
 
-.infomedia-banner {
-	height: 12px;
-	width: 180px;
+.meny {
+	display: flex;
+	align-items: center;
+}
+
+.hjemLink {
+	font-family: helvetica;
+	font-size: 40px;
+	order: 1;
 }
 
 .searchInput {
 	border-radius: 15px;
 	border: 1px;
-	width: 60px;
+	width: 80px;
+	height: 35px;
 }
 
 .søkButton {
 	border-radius: 15px;
 	border: 1px;
+	height: 35px;
+	width: 50px;
+	margin-right: 5px;
+}
+
+.søkButton:hover {
+	background-color: darkgrey;
+	cursor: pointer;
+}
+
+.søk {
+	order: 3;
+}
+
+.dropDown {
+	position: relative;
+	display: inline-block;
+	order: 0;
+}
+
+.dropKnapp {
+    color: white;
+	padding: 5px;
+	font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Innhold i dropdown menyen */
+.dropDownInnhold {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Knappene i drop down menyen */
+.dropDownInnhold a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Bytter farge på innhold i drop down menyen */
+.dropDownInnhold a:hover {
+	background-color: #f1f1f1
+}
+
+/* Gjør drop down menyen synlig */
+.dropDown:hover .dropDownInnhold {
+    display: block;
+}
+
+.dropDown:hover .dropKnapp {
+    background-color: darkgrey;
+}
+
+.dropDown:hover .forsideBilde {
+	height: 230px;
+	width: 160px;
+}
+
+
+.dropIcon {
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+.dropDownInnholdFilm {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    font-family: helvetica;
+    font-size: 14px;
+}
+
+.dropDown:hover .dropDownInnholdFilm {
+    display: block;
 }
 
 main {
@@ -43,6 +138,8 @@ main {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	background-color: #f1f1f1;
+
 }
 
 .left {
@@ -59,19 +156,15 @@ main {
 	height: 200px;
 	width: 140px;
 	margin: 5px;
+	transition: width 0.6s, height 0.6s;
 }
-
-.text {
-	display: none;
-}
-
-.forsideBilde:hover, .text { 
-	height: 205px;
-	width: 145px;
-	display: block; }
 
 a:link {
 	text-decoration: none;
+}
+
+a:visited {
+	color: black;
 }
 
 .ikon {
@@ -121,16 +214,12 @@ footer {
 		justify-content: flex-end;
 	}
 
+	.searchInput {
+		width: 150px;
+	}
+
 	.infomedia-banner {
 		display: none;
-	}
-
-	.searchInput {
-		width: 50%;
-	}
-
-	.panel {
-		
 	}
 
 	.main-content {
