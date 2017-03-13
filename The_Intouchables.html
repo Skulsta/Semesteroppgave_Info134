@@ -23,16 +23,33 @@
 
 		<!--header med hjemknapp og søkfunksjon-->
 		<header>
-			<nav class="hjemLink">
-				<a href="InfomediaDB.html">
-					<img class="infomedia-banner" src="infomedia-banner.gif" alt="infomedia-logo"/>
-				</a>
+			<form action="sokeresultat.html" class="søk">
+			<nav>
+				<input class="searchInput" type="search" placeholder="   Søk...">
+				<input class="søkButton" type="submit"  value="Søk">
 			</nav>
+			</form>
 
-			<nav class="søk">
-				<input class="searchInput" type="search" placeholder="Søk...">
-				<input class="søkButton" type="submit" value="Søk">
-			</nav>
+			<!--DropDown meny til liten skjerm-->
+			<section class="meny">
+
+				<nav class="hjemLink">
+					<a href="InfomediaDB.html">IFIM</a>
+				</nav>
+
+				<div class="dropDown">
+					<div class="dropKnapp">
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+					</div>
+					<div class="dropDownInnhold">
+						<a href="#">Logg ut</a>
+						<a href="#">Mine filmer</a>
+						<a href="#">Min bruker</a>
+					</div>
+				</div>
+			</section>
 		</header>
 
 		<main>

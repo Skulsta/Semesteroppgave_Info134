@@ -12,6 +12,11 @@ header {
 	align-items: center;
 }
 
+h3 {
+	font-family: helvetica;
+	font-weight: lighter;
+}
+
 .meny {
 	display: flex;
 	align-items: center;
@@ -21,6 +26,10 @@ header {
 	font-family: helvetica;
 	font-size: 40px;
 	order: 1;
+}
+
+.hjemLink:hover {
+	background-color: darkgrey;
 }
 
 .searchInput {
@@ -78,6 +87,7 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: helvetica;
 }
 
 /* Bytter farge på innhold i drop down menyen */
@@ -123,6 +133,65 @@ header {
     display: block;
 }
 
+.forsideButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Knapp til min liste*/
+.minListeButton {
+	display: flex;
+	padding: 2px;
+	background-color: #f1f1f1;
+	border-radius: 15px;
+	width: 70px;
+	height: 20px;
+	font-size: 12px;
+	font-family: helvetica;
+	font-weight: bold;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 5px;
+	order: 3;
+}
+
+.ikon {
+	width: 15px;
+	height: 15px;
+}
+
+.vurdering {
+	display: flex;
+	flex-direction: row;
+	padding: 2px;
+	background-color: #f1f1f1;
+	border-radius: 15px;
+	order: 2;
+	margin-top: 5px;
+	width: 70px;
+	height: 20px;
+	align-items: center;
+	justify-content: space-around;
+	font-family: helvetica;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.star {
+	width: 15px;
+	height: 15px;
+}
+
+.minListeButton:hover, .vurdering:hover {
+	background-color: darkgrey;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+}
+
 main {
 	display: flex;
 	flex-grow: 1;
@@ -157,6 +226,7 @@ main {
 	width: 140px;
 	margin: 5px;
 	transition: width 0.6s, height 0.6s;
+	transition-timing-function: ease-out;
 }
 
 a:link {
@@ -166,12 +236,6 @@ a:link {
 a:visited {
 	color: black;
 }
-
-.ikon {
-	height: 30px;
-	width: 30px;
-}
-
 
 .overskrift {
 	font-weight: bold;

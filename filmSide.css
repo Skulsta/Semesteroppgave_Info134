@@ -7,27 +7,105 @@ body {
 header {
 	display: flex;
 	background-color: #f1f1f1;
+	color: white;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	align-items: center;
 }
 
-/*Bilde i navbar*/
-.infomedia-banner {
-	height: 12px;
-	width: 180px;
+.meny {
+	display: flex;
+	align-items: center;
 }
 
-/*søk input*/
+.hjemLink {
+	font-family: helvetica;
+	font-size: 40px;
+	order: 1;
+}
+
+.hjemLink:hover {
+	background-color: darkgrey;
+}
+
 .searchInput {
 	border-radius: 15px;
 	border: 1px;
-	width: 60px;
+	width: 80px;
+	height: 35px;
 }
+
 
 .søkButton {
 	border-radius: 15px;
 	border: 1px;
+	height: 35px;
+	width: 50px;
 	margin-right: 5px;
+}
+
+.søkButton:hover {
+	background-color: darkgrey;
+	cursor: pointer;
+}
+
+.søk {
+	order: 3;
+}
+
+.dropDown {
+	position: relative;
+	display: inline-block;
+	order: 0;
+}
+
+.dropKnapp {
+    color: white;
+	padding: 5px;
+	font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Innhold i dropdown menyen */
+.dropDownInnhold {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Knappene i drop down menyen */
+.dropDownInnhold a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: helvetica;
+}
+
+/* Bytter farge på innhold i drop down menyen */
+.dropDownInnhold a:hover {
+	background-color: #f1f1f1
+}
+
+/* Gjør drop down menyen synlig */
+.dropDown:hover .dropDownInnhold {
+    display: block;
+}
+
+.dropDown:hover .dropKnapp {
+    background-color: darkgrey;
+}
+
+.dropIcon {
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	margin-bottom: 6px;
+	margin-top: 6px;
 }
 
 main {
@@ -126,6 +204,7 @@ main {
 
 a:link {
 	text-decoration: none;
+	color: black;
 }
 
 a:visited {
@@ -247,12 +326,6 @@ footer {
 		order: 3;
 	}
 
-	.searchInput {
-		width: 150px;
-		height: 20px;
-		margin-top: 5px;	
-	}
-
 	.infomedia-banner {
 		width: 350px;
 		height: 20px;
@@ -265,5 +338,9 @@ footer {
 
 	.vurdering {
 		margin-left: 0px;
+	}
+
+	.searchInput {
+		width: 150px;
 	}
 }
