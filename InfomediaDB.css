@@ -17,6 +17,28 @@ h3 {
 	font-weight: lighter;
 }
 
+.bruker {
+	display: flex;
+	order: 3;
+	margin-left: 15px;
+	align-items: center;
+}
+
+.brukerInfo {
+	margin: 5px;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-family: helvetica;
+	color: black;
+	align-items: center;
+}
+
+.profilBilde {
+	width: 27px;
+	height: 27px;
+}
+
 .meny {
 	display: flex;
 	align-items: center;
@@ -24,7 +46,7 @@ h3 {
 
 .hjemLink {
 	font-family: helvetica;
-	font-size: 40px;
+	font-size: 38px;
 	order: 1;
 }
 
@@ -53,7 +75,7 @@ h3 {
 }
 
 .søk {
-	order: 3;
+	order: 4;
 }
 
 .dropDown {
@@ -169,7 +191,7 @@ h3 {
 	border-radius: 15px;
 	order: 2;
 	margin-top: 5px;
-	width: 70px;
+	width: 75px;
 	height: 20px;
 	align-items: center;
 	justify-content: space-around;
@@ -253,12 +275,13 @@ a:visited {
 }
 
 footer {
-	background-color: lightblue;
+	background-color: #f1f1f1;
 	width: 100%;
 	color: white;
 	border-top: 5px;
 	border-color: black;
 	text-decoration: none;
+	text-align: center;
 }
 
 

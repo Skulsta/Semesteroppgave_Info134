@@ -19,7 +19,7 @@ header {
 
 .hjemLink {
 	font-family: helvetica;
-	font-size: 40px;
+	font-size: 38px;
 	order: 1;
 }
 
@@ -235,20 +235,19 @@ a:visited {
 	flex-direction: column;
 	width: 50px;
 	background-color: #f1f1f1;
-	border-radius: 10px;
 	padding: 4px;
 }
 
 .skuespillerBilde{
 	height: 75px;
 	width: 50px;
-	border-radius: 15px;
 }
 
 footer {
-	background-color: lightblue;
+	background-color: #f1f1f1;
 	color: white;
 	border-top: 5px;
+	text-align: center;
 }
 
 @media (min-width: 768px) {

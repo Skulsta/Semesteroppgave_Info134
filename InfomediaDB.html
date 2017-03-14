@@ -20,7 +20,7 @@
 	</head>
 
 	<body>
-
+		<script src="functions.js"></script>
 		<!--header med hjemknapp og søkfunksjon-->
 		<header>
 			<form action="sokeresultat.html" class="søk">
@@ -30,7 +30,7 @@
 			</nav>
 			</form>
 
-			<!--DropDown meny til liten skjerm-->
+			<!--Navbar-->
 			<section class="meny">
 
 				<nav class="hjemLink">
@@ -45,11 +45,23 @@
 					</div>
 					<div class="dropDownInnhold">
 						<a href="#">Logg ut</a>
-						<a href="#">Mine filmer</a>
-						<a href="#">Min bruker</a>
+						<a href="#">Filmliste</a>
+						<a href="#">Lån</a>
+						<a href="#" id="rutiner" onclick="handleClick()">Rutiner</a>
+						<a href="#">Bruker</a>
 					</div>
 				</div>
+
+				<section class="bruker">
+					<img src="danBørge.jpg" class="profilBilde">
+					<ul class="brukerInfo">
+						<li>Dan Børge</li>
+						<li>Student</li>
+					</ul>
+				</section>
+
 			</section>
+
 		</header>
 
 				<main>
@@ -1085,8 +1097,7 @@
 				</main>
 
 				<footer>
-				<center>
-				InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
-				</center>
+					InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a>
+				</footer>
 			</body>
 		</html>
