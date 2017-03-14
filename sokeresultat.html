@@ -21,18 +21,48 @@
 
 	<body>
 
+		<script src="functions.js"></script>
 		<!--header med hjemknapp og søkfunksjon-->
 		<header>
-			<nav class="hjemLink">
-				<a href="InfomediaDB.html">
-					<img class="infomedia-banner" src="infomedia-banner.gif" alt="infomedia-logo"/>
-				</a>
+			<form action="sokeresultat.html" class="søk">
+			<nav>
+				<input class="searchInput" type="search" placeholder="   Søk...">
+				<input class="søkButton" type="submit"  value="Søk">
 			</nav>
+			</form>
 
-			<nav class="søk">
-				<input class="searchInput" type="search" placeholder="Søk...">
-				<input class="søkButton" type="submit" value="Søk">
-			</nav>
+			<!--Navbar-->
+			<section class="meny">
+
+				<nav class="hjemLink">
+					<a href="InfomediaDB.html">IFIM</a>
+				</nav>
+
+				<div class="dropDown">
+					<div class="dropKnapp">
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+					</div>
+					<div class="dropDownInnhold">
+						<a href="#">Logg ut</a>
+						<a href="#">Filmliste</a>
+						<a href="#">Lån</a>
+						<a href="#" id="rutiner" onclick="handleClick()">Rutiner</a>
+						<a href="#">Bruker</a>
+					</div>
+				</div>
+
+				<section class="bruker">
+					<img src="danBørge.jpg" class="profilBilde">
+					<ul class="brukerInfo">
+						<li>Dan Børge</li>
+						<li>Student</li>
+					</ul>
+				</section>
+
+			</section>
+
 		</header>
 
 		<main class="mainSection">
