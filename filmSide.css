@@ -119,6 +119,7 @@ main {
 	order: 1;
 	flex-grow: 1;
 	flex-direction: column;
+	margin-top: 7px;
 }
 
 /*Knapp til min liste*/
@@ -225,7 +226,7 @@ a:visited {
 	display: flex;
 	order: 2;
 	justify-content: space-around;
-	padding-bottom: 5px;
+	
 }
 
 /*Gruppe med skuespiller bilder*/
