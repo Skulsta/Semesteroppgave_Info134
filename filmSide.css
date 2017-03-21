@@ -12,6 +12,10 @@ header {
 	align-items: center;
 }
 
+li {
+	list-style: none;
+}
+
 .meny {
 	display: flex;
 	align-items: center;
@@ -215,11 +219,23 @@ a:visited {
 
 .overskrift {
 	font-weight: bold;
+	font-size: 20px;
+	font-family: helvetica;
 }
 
 .info {
 	order: 2;
 	font-family: helvetica;
+}
+
+.kommentarer {
+	display: flex;
+	flex-direction: column;
+	order: 0;
+}
+
+.kommentarInput {
+	border-radius: 15px;
 }
 
 .aside {
@@ -290,13 +306,14 @@ footer {
 	}
 
 	.info {
-		order: 4;
+		order: 1;
 		width: 440px;
-		margin-left: 207px;
+		margin-left: 40px;
 	}
 
-	.overskrift {
-		font-size: 20px;
+	.infoFilm {
+		display: flex;
+
 	}
 
 	.skuespillerBilde {
