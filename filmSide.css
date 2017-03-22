@@ -4,12 +4,21 @@ body {
 	height: 100%;
 }
 
-header {
+.top {
 	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+header {
 	background-color: #f1f1f1;
 	color: white;
-	justify-content: space-between;
-	align-items: center;
+}
+
+.avansert_sok {
+	display: flex;
+	justify-content: flex-start;
+	padding: 5px;
 }
 
 
@@ -17,6 +26,7 @@ header {
 	display: flex;
 	order: 3;
 	margin-left: 15px;
+	margin-bottom: 20px;
 	align-items: center;
 }
 
@@ -29,7 +39,6 @@ header {
 	color: black;
 	align-items: center;
 }
-
 .profilBilde {
 	width: 27px;
 	height: 27px;
@@ -41,7 +50,6 @@ li {
 
 .meny {
 	display: flex;
-	align-items: center;
 }
 
 .hjemLink {
@@ -61,7 +69,6 @@ li {
 	height: 35px;
 }
 
-
 .søkButton {
 	border-radius: 15px;
 	border: 1px;
@@ -70,14 +77,17 @@ li {
 	margin-right: 5px;
 }
 
+
 .søkButton:hover {
 	background-color: darkgrey;
 	cursor: pointer;
 }
 
 .søk {
-	order: 3;
+	align-items: center;
+	order: 4;
 }
+
 
 .dropDown {
 	position: relative;
@@ -87,7 +97,8 @@ li {
 
 .dropKnapp {
     color: white;
-	padding: 5px;
+	margin-right: 5px;
+	padding-top: 2px;
 	font-size: 16px;
     border: none;
     cursor: pointer;
