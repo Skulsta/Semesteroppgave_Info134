@@ -9,11 +9,11 @@ knapp.addEventListener("click",kommentar);
 function kommentar(e) {
 	e.preventDefault();
 	var text = document.getElementById("kommentarArea").value;
-	var p = document.createElement("p");
+	var li = document.createElement("p");
 	if(text === ""){
 		alert("Tomt felt.");
 	} else {
-	p.innerHTML = text;
+	li.innerHTML = text;
 	kommentarList.appendChild(li);
 	kommentarForm.reset();
 	}
