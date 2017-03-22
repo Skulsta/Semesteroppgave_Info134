@@ -12,6 +12,29 @@ header {
 	align-items: center;
 }
 
+
+.bruker {
+	display: flex;
+	order: 3;
+	margin-left: 15px;
+	align-items: center;
+}
+
+.brukerInfo {
+	margin: 5px;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-family: helvetica;
+	color: black;
+	align-items: center;
+}
+
+.profilBilde {
+	width: 27px;
+	height: 27px;
+}
+
 li {
 	list-style: none;
 }
@@ -282,6 +305,22 @@ footer {
 	text-align: center;
 }
 
+/* Små mobilskjermer */
+@media (max-width: 375px) {
+
+	.forsideBilde {
+	height: 150px;
+	width: 100px;
+	margin: 5px;
+	transition: width 0.6s, height 0.6s;
+	transition-timing-function: ease-out;
+}
+
+.bruker {
+	display: none;
+	}
+}
+
 @media (min-width: 768px) {
 
 	body {
@@ -374,5 +413,19 @@ footer {
 
 	.searchInput {
 		width: 150px;
+	}
+
+	.bar {
+		display: flex;
+		background-color: lightgray;
+		color: white;
+		justify-content: flex-end;
+	}
+
+	.bruker {
+	display: flex;
+	order: 3;
+	margin-left: 15px;
+	align-items: center;
 	}
 }
