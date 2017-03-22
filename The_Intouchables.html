@@ -132,12 +132,12 @@
 				<!--Vurdering av film/kommentarer-->
 				<section class="kommentarer">
 					<p class="overskrift">Vurderinger</p>
-					<ul id="kommentarList"></ul>
+					<div id="kommentarList">
+						<p/>
+					</div>
 
-					<form action="#" name="kommentarForm">
-						<div class="kommentarInput">
-							<input autofocus type="text" name="kommentar">	
-						</div>
+					<form action="#" name="kommentarForm" id="kommentarForm">
+						<textarea id="kommentarArea" name="kommentar"></textarea>	
 						
 						<input id="knapp" type="submit" name="submit" value="Lagre">
 					</form>
