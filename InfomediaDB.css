@@ -2,6 +2,7 @@
 body {
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
 }
 
 h3 {
@@ -23,6 +24,18 @@ header {
 fieldset {
 	background-color: #f1f1f1;
 	color: black;
+	display: flex;
+}
+
+.advancedField {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.verticalLine {
+  border-left: thick solid #ff0000;
 }
 
 .avansert_sok {
@@ -30,7 +43,6 @@ fieldset {
 	justify-content: flex-start;
 	padding: 5px;
 }
-
 
 .bruker {
 	display: flex;
@@ -77,10 +89,9 @@ fieldset {
 }
 
 .advancedSearch {
-	width: 120px;
+	width: 150px;
 	height: 20px;
-	border: 1px;
-	margin: 10px;
+	border: thin solid black;
 }
 
 .søkButton {
