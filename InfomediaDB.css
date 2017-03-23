@@ -4,23 +4,39 @@ body {
 	flex-direction: column;
 }
 
-header {
-	display: flex;
-	background-color: #f1f1f1;
-	color: white;
-	justify-content: space-between;
-	align-items: center;
-}
-
 h3 {
 	font-family: helvetica;
 	font-weight: lighter;
 }
 
+.top {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+header {
+	background-color: #f1f1f1;
+	color: white;
+}
+
+fieldset {
+	background-color: #f1f1f1;
+	color: black;
+}
+
+.avansert_sok {
+	display: flex;
+	justify-content: flex-start;
+	padding: 5px;
+}
+
+
 .bruker {
 	display: flex;
 	order: 3;
 	margin-left: 15px;
+	margin-bottom: 20px;
 	align-items: center;
 }
 
@@ -41,7 +57,6 @@ h3 {
 
 .meny {
 	display: flex;
-	align-items: center;
 }
 
 .hjemLink {
@@ -61,6 +76,13 @@ h3 {
 	height: 35px;
 }
 
+.advancedSearch {
+	width: 120px;
+	height: 20px;
+	border: 1px;
+	margin: 10px;
+}
+
 .søkButton {
 	border-radius: 15px;
 	border: 1px;
@@ -76,6 +98,7 @@ h3 {
 }
 
 .søk {
+	align-items: center;
 	order: 4;
 }
 
@@ -87,7 +110,8 @@ h3 {
 
 .dropKnapp {
     color: white;
-	padding: 5px;
+	margin-right: 5px;
+	padding-top: 2px;
 	font-size: 16px;
     border: none;
     cursor: pointer;
@@ -126,12 +150,6 @@ h3 {
 .dropDown:hover .dropKnapp {
     background-color: darkgrey;
 }
-
-.dropDown:hover .forsideBilde {
-	height: 230px;
-	width: 160px;
-}
-
 
 .dropIcon {
 	width: 35px;
@@ -351,7 +369,7 @@ footer {
 	padding-bottom: 5px;
 	padding-right: 5px;
 	order: -1;
-}
+	}
 }
 
 
