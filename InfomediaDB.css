@@ -2,7 +2,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
 }
 
 h3 {
@@ -277,6 +277,13 @@ main {
 	transition-timing-function: ease-out;
 }
 
+.forsideBilde:hover {
+	width: 150px;
+    height: 210px;
+    transition: width 0.6s, height 0.6s;
+	transition-timing-function: ease-out;
+}
+
 a:link {
 	text-decoration: none;
 }
@@ -316,8 +323,6 @@ footer {
 	height: 150px;
 	width: 100px;
 	margin: 5px;
-	transition: width 0.6s, height 0.6s;
-	transition-timing-function: ease-out;
 }
 
 .bruker {
