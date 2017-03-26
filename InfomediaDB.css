@@ -320,8 +320,8 @@ footer {
 @media (max-width: 375px) {
 
 	.forsideBilde {
-	height: 150px;
-	width: 100px;
+	height: 100px;
+	width: 70px;
 	margin: 5px;
 }
 
