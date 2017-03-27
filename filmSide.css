@@ -315,6 +315,10 @@ footer {
 	text-align: center;
 }
 
+.tabell {
+	order: 5;
+}
+
 /* Små mobilskjermer */
 @media (max-width: 375px) {
 
