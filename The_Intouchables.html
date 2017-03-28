@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name = "description" content ="Infomedia MediaDB">
+
+		<meta name = "author" content ="Vegar Ellingsen og Stian Skulstad">
+
+		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+
+		<link rel="stylesheet" href="filmSide.css">
+
+		<title>InfomediaDB</title>
+
+		<script type="text/javascript" src="script/functions.js"></script>
+		<script type="text/javascript" src="script/object.js"></script>
+    	<script type="text/javascript" src="script/genres.js"></script>
+    	<script type="text/javascript" src="script/reviews.js"></script>
+    	<script type="text/javascript" src="script/query_params.js"></script>
+    	<script type="text/javascript" src="script/show_movie.js"></script>
+	
+	</head>
+
+	<body>
+
+		<!--header med hjemknapp og søkfunksjon-->
+		<header>
+			<section class="top">
+			<form action="sokeresultat.html" class="søk">
+			<nav>
+				<input class="searchInput" type="search" placeholder="   Søk...">
+				<input class="søkButton" type="submit"  value="Søk">
+				<a class="avansert_sok" href="avansert_sok.html">Avansert søk</a>
+			</nav>
+			</form>
+
+			<!--DropDown meny til liten skjerm-->
+			<section class="meny">
+
+				<nav class="hjemLink">
+					<a href="InfomediaDB.html">IFIM</a>
+				</nav>
+
+				<div class="dropDown">
+					<div class="dropKnapp">
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+						<div class="dropIcon"></div>
+					</div>
+					<div class="dropDownInnhold">
+						<a href="#">Logg ut</a>
+						<a href="#">Mine filmer</a>
+						<a href="#">Min bruker</a>
+					</div>
+				</div>
+
+				<section class="bruker">
+					<img src="danBørge.jpg" class="profilBilde">
+					<ul class="brukerInfo">
+						<li>Dan Børge</li>
+						<li>Student</li>
+					</ul>
+				</section>
+
+			</section>
+		</section>
+		</header>
+
+		<main>
+			<aside class="aside">
+				<!--skuespiller bilder som er lenket til skuespiller side-->
+				<a class="skuespiller" href="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">
+						<img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/François_Cluzet.jpg" alt="François Cluzet">
+					<p>François Cluzet</p>
+				</a>
+
+				<a class="skuespiller" href="http://www.imdb.com/name/nm1082477/?ref_=tt_cl_t2">
+					<img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Omar_Sy.jpg" alt="Omar Sy">
+					<p>Omar Sy</p>
+				</a>
+
+				<a class="skuespiller" href="http://www.imdb.com/name/nm1109153/?ref_=fn_al_nm_1">
+					<img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Audrey_Fleurot.jpg" alt="Audrey Fleurot">
+					<p>Audrey Fleurot</p>
+				</a>
+
+				<a class="skuespiller" href="http://www.imdb.com/name/nm0494504/?ref_=fn_al_nm_1">
+					<img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Anne_Le_Ny.png" alt="Anne Le Ny">
+					<p>Anne Le Ny</p>
+				</a>
+
+				<a class="skuespiller" href="http://www.imdb.com/name/nm1525639/?ref_=tt_cl_t5">
+					<img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Joséphine_de_Meaux.png" alt="Joséphine de Meaux">
+					<p>Joséphine de Meaux</p>
+				</a>
+			</aside>
+
+			<section class="mainSection">
+
+				<section class="forsideInnhold">
+					<!--Cover bilde The Intouchables-->
+					<img class="forsideBilde" src="Filmer/The_Intouchables/The_Intouchables_3.jpg" alt="The Intouchables">
+
+					<!--Knapper til vurdering og min liste-->
+					<section class="forsideButtons">
+						<a class="minListeButton" href="#">
+							<img class="ikon" alt="+" src="pluss_icon.ico">
+							<p>Min liste</p>
+						</a>
+
+						<a class="vurdering" href="#">
+							<img class="star" alt="stjerne" src="star-icon.png">
+							<p>Vurdering</p>
+						</a>
+					</section>
+
+					<!--Youtube trailer til The Intouchables-->
+					<iframe class="video" src="https://www.youtube.com/embed/34WIbmXkewU" alt="The Intouchables" frameborder="0" allowfullscreen></iframe>
+				</section>
+
+				<section class="infoFilm">
+					<!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
+					<section class="tabell">
+			    		<hr>
+					    <h5>Denne siden viser detaljer om en film.</h5>
+					    <table id="movie_stat_table" border=1>
+					      <caption>Table: Stats from "object"</caption>
+					      <tr>
+							<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+					      </tr>
+					    </table>
+					    
+					    <table id="genre_stat_table" border=1>
+					      <caption>Table: Stats from "object_genre"</caption>
+					      <tr>
+							<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+					      </tr>
+					    </table>
+					    
+					    <table id="review_stat_table" border=1>
+					      <caption>Table: Stats from "reivew"</caption>
+					      <tr>
+							<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+					      </tr>
+					    </table>
+					</section>
+
+					<!--Vurdering av film/kommentarer-->
+					<section class="kommentarer">
+						<p class="overskrift">Vurderinger</p>
+						<ul id="kommentarList"></ul>
+
+						<form action="#" name="kommentarForm" id="kommentarForm">
+							<textarea id="kommentarArea" name="kommentar"></textarea>	
+							
+							<input id="knapp" type="submit" name="submit" value="Lagre">
+						</form>
+					</section>
+
+				</section>
+			</section>
+		</main>
+		<footer>Kontaktinformasjon: InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
+	</body>
+</html>
