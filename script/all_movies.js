@@ -1,5 +1,7 @@
 window.onload = function() {
     list_element = document.getElementById("all_movies");
+    var movies = [];
+
     for (movie_id in movies_object){
         movie_details = movies_object[movie_id];
         list_item = document.createElement("LI");
@@ -11,6 +13,10 @@ window.onload = function() {
         item_link.appendChild(link_text);
 	
         list_item.appendChild(item_link);
-        list_element.appendChild(list_item);      
+        list_element.appendChild(list_item); 
+    }
+
+    for (var i = 0; i < 5; i++){
+        movies.push(list_element[i]);
     }
 }
