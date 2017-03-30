@@ -10,9 +10,9 @@ function searchForTitle() {
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if (movie_details["otitle"].includes(query_params.film_title)) {
+		// Comparing input to titles in movies_object. Making them upper case in order to make them case insensitive.
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase())) {
 			list_item = document.createElement("li");
-
 			item_link = document.createElement("A");
 			item_link.href = "show_movie.html?id=" + movie_id;
 			link_text = document.createTextNode(movie_details["otitle"]);
@@ -28,6 +28,11 @@ function searchForTitle() {
     	}
 
 	}
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 
 
