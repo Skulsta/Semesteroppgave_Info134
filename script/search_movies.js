@@ -59,6 +59,7 @@ var animals = [
 var movies = movies_object
 
 
+/* 
 function searchAnimalsTheEasyWay(e) {
 	e.preventDefault();
 	// Filter itererer gjennom hvert element og returnerer en ny liste med de elementene som består testen
@@ -66,8 +67,9 @@ function searchAnimalsTheEasyWay(e) {
 	var results = animals.filter(a => a.type === input.value);
 	displayResults(results);
 }
+*/
 
-function searchMoviesTheEasyWay(e) {
+function searchAnimalsTheEasyWay(e) {
 	e.preventDefault();
 	// Filter itererer gjennom hvert element og returnerer en ny liste med de elementene som består testen
 	// vi har spesifisert. I dette tilfelle kan vi lese: Legg kun til de elementene som returnerer true for a.type === input.value
@@ -78,7 +80,7 @@ function searchMoviesTheEasyWay(e) {
 
 /*
 	Denne metoden viser elementene på skjermen for brukeren
-*/
+
 function displayResults(results) {
 	// Først resetter vi søkeresultatene, dersom det har vært søkt på noe tidligere. 
 	// Prøv å kommentere ut metodekallet under og se hva som skjer
@@ -94,9 +96,10 @@ function displayResults(results) {
 		resultList.appendChild(li);
 	}
 }
+*/
 
 
-function displayMovieResults(results) {
+function displayResults(results) {
 	// Først resetter vi søkeresultatene, dersom det har vært søkt på noe tidligere. 
 	// Prøv å kommentere ut metodekallet under og se hva som skjer
 	resetSearchResults();
@@ -121,13 +124,14 @@ function displayMovieResults(results) {
 
 	Map returnerer en ny liste, så vi kan bruke .join("") for å returnere en lang tekststreng.
 	Prøv gjerne console.log(html) for å se hva som blir returnert.
-*/
+
 function displayResultsTheEasyWay(results) {
 	var html = results.map(animal => `<li>${animal.type} har en ${animal.color.toLowerCase()} farge</li>`).join("");
 	resultList.innerHTML = html;
 }
+*/
 
-function displayMovieResultsTheEasyWay(results) {
+function displayResultsTheEasyWay(results) {
 	var html = results.map(movies_object => `<li>${movies_object.otitle} har en ${movies_object.ntitle.toLowerCase()} tittel</li>`).join("");
 	resultList.innerHTML = html;
 }
@@ -155,7 +159,7 @@ function fuzzyAnimalSearch(searchTerm) {
 	}
 
 	// Her returnerer vi en liste med dyr som består typeMatches-funksjonen eller colorMatches-funksjonen
-	return animals.filter(a => typeMatches(a) || colorMatches(a));
+	return movies_object.filter(a => typeMatches(a) || colorMatches(a));
 }
 
 /*
