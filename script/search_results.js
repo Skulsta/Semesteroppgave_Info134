@@ -31,20 +31,10 @@ function searchForTitle() {
 }
 */
 
-function searchForTitle() {
-
-	var results = [];
-
-	for (movie_id in movies_object) {
-		movie_details = movies_object[movie_id];
-		// Comparing input to titles in movies_object. Making them upper case in order to make them case insensitive.
-		if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase())) {
+function addMoviePicture() {
 			list_item = document.createElement("li");
 			item_link = document.createElement("A");
 			item_link.href = "show_movie.html?id=" + movie_id;
-			link_text = document.createTextNode(movie_details["otitle"]);
-       		item_link.appendChild(link_text);
-
 
        		link_pic = document.createElement('img');
 
@@ -61,26 +51,22 @@ function searchForTitle() {
     		item_link.appendChild(link_pic);
        		list_item.appendChild(item_link);
 
+       		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
        		film_title.appendChild(list_item); 
+}
+
+function searchForTitle() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase() || query_params.film_title)) {
+			addMoviePicture();
        	}
     }
 }
 
-
-function addImage() {
-	link_pic = document.createElement('img');
-
-    src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/2/2345' + '.jpg';
-    link_pic.src = src;
-
-    link_pic.onclick = function() {
-    window.location.href = "show_movie.html?id=" + movie_id;
-}
-
-    pic.appendChild(link_pic);
-}
-
-
+/* Makes the search function case insensitive */
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -103,6 +89,13 @@ window.onload = function() {
 	query_params = get_query_string_parameters();
 
 	search_results = movies_object;
+
+
+	if (query_params.main_search) {
+    	main_search = document.getElementById("main_search");
+		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
+		searchForTitle();
+	}
 
 	
 	if (query_params.film_title) {
