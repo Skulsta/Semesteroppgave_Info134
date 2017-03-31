@@ -48,14 +48,19 @@ function searchForTitle() {
 
        		link_pic = document.createElement('img');
 
-    		src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/2/2345' + '.jpg';
+       		var pic_id = 0;
+       		if (movie_id > 1000)
+       			pic_id = movie_id.toString().charAt(0);
+
+
+    		src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/' + pic_id + '/' + movie_id + '.jpg';
     		link_pic.src = src;
 
 
 
     		item_link.appendChild(link_pic);
-
        		list_item.appendChild(item_link);
+
        		film_title.appendChild(list_item); 
        	}
     }
