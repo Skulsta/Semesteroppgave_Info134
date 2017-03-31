@@ -4,6 +4,7 @@ function search_for_X() {
 }
 */
 
+/*
 function searchForTitle() {
 
 	var results = [];
@@ -27,7 +28,52 @@ function searchForTitle() {
         results.push(film_title[i]);
     	}
 
-	}
+}
+*/
+
+function searchForTitle() {
+
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		// Comparing input to titles in movies_object. Making them upper case in order to make them case insensitive.
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase())) {
+			list_item = document.createElement("li");
+			item_link = document.createElement("A");
+			item_link.href = "show_movie.html?id=" + movie_id;
+			link_text = document.createTextNode(movie_details["otitle"]);
+       		item_link.appendChild(link_text);
+
+
+       		link_pic = document.createElement('img');
+
+    		src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/2/2345' + '.jpg';
+    		link_pic.src = src;
+
+
+
+    		item_link.appendChild(link_pic);
+
+       		list_item.appendChild(item_link);
+       		film_title.appendChild(list_item); 
+       	}
+    }
+}
+
+
+function addImage() {
+	link_pic = document.createElement('img');
+
+    src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/2/2345' + '.jpg';
+    link_pic.src = src;
+
+    link_pic.onclick = function() {
+    window.location.href = "show_movie.html?id=" + movie_id;
+}
+
+    pic.appendChild(link_pic);
+}
 
 
 function capitalizeFirstLetter(string) {
