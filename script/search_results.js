@@ -52,7 +52,7 @@ function addMoviePicture() {
        		list_item.appendChild(item_link);
 
        		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
-       		film_title.appendChild(list_item); 
+       		results.appendChild(list_item); 
 }
 
 function searchForTitle() {
@@ -60,7 +60,7 @@ function searchForTitle() {
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase() || query_params.film_title)) {
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase() || query_params.film_title.toUpperCase())) {
 			addMoviePicture();
        	}
     }

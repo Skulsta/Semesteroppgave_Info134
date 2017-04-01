@@ -70,8 +70,40 @@
 		</section>
 		</header>
 
-	<main>
+		<main>
 		<section class="main-content">
+  
+    	<!-- Skjemaet gir mulighet for å ha en mer avansert søk. -->
+    	<form action="#" name="search">
+		<div>
+			<h1><center>Avansert søk</center></h1>
+		</div>
+		<fieldset>
+			<legend>Søk</legend>
+			<div class="advancedField">
+				<label for="film_title">Film tittel</label>
+				<input id="title" name="title" class="advancedSearch" type="text" placeholder="e.g. King Kong" >
+			</div>
+			<div class="advancedField">
+				<label for="actor">Skuespiller</label>
+				<input id="actor" name="actor" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
+			</div>
+			<div class="advancedField">
+				<label for="director">Regissør</label>
+				<input id="director" name="director" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
+			</div>
+			<div class="advancedField">
+				<label for="genre">Sjanger</label>
+				<input id="genre" name="genre" class="advancedSearch" type="text" placeholder="Drama">
+			</div>
+			<div class="advancedField">
+				<label for="country">Land</label>
+				<input id="country" name="country" class="advancedSearch" type="text" placeholder="Frankrike">
+			</div>	
+		</fieldset>
+		<input type="submit" name="submit" id="submit_search" value="Søk">
+	</form>
+
 
 			<aside class="left">
 				<h3> Resultat </h3>
@@ -93,8 +125,7 @@
 				</section>
 			</aside>
 
-  		</section>
-  </main>
+  	</section>
 
 
 <footer>InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
