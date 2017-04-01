@@ -36,6 +36,8 @@ function addMoviePicture() {
 			item_link.href = "show_movie.html?id=" + movie_id;
 
        		link_pic = document.createElement('img');
+       		link_pic.style.height = '200px';
+       		link_pic.style.width = '140px';
 
        		var pic_id = 0;
        		if (movie_id > 1000)
@@ -47,7 +49,7 @@ function addMoviePicture() {
     		item_link.appendChild(link_pic);
 
        		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
-       		pic.appendChild(item_link); 
+       		results.appendChild(item_link); 
 }
 
 
