@@ -32,7 +32,6 @@ function searchForTitle() {
 */
 
 function addMoviePicture() {
-			list_item = document.createElement("li");
 			item_link = document.createElement("A");
 			item_link.href = "show_movie.html?id=" + movie_id;
 
@@ -42,18 +41,15 @@ function addMoviePicture() {
        		if (movie_id > 1000)
        			pic_id = movie_id.toString().charAt(0);
 
-
     		src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/' + pic_id + '/' + movie_id + '.jpg';
     		link_pic.src = src;
 
-
-
     		item_link.appendChild(link_pic);
-       		list_item.appendChild(item_link);
 
        		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
-       		results.appendChild(list_item); 
+       		pic.appendChild(item_link); 
 }
+
 
 function searchForTitle() {
 	var results = [];
@@ -62,6 +58,11 @@ function searchForTitle() {
 		movie_details = movies_object[movie_id];
 		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase() || query_params.film_title.toUpperCase())) {
 			addMoviePicture();
+
+			/* Adds the title to the page. Commented out for a later implementation.
+			title = document.createTextNode(movie_details["otitle"]);
+			film_title.appendChild(title);
+			*/
        	}
     }
 }
