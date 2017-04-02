@@ -83,7 +83,9 @@ function searchForActor() {
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if ((movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
+		if (movie_details["folk"] === null)
+			console.log("Faen.");
+		else if ((movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
 			addMoviePicture();
     }
 }
