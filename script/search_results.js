@@ -53,6 +53,8 @@ function addMoviePicture() {
 }
 
 
+/* Mange funksjoner som gjør nesten helt det samme. Mulig dette kan gjøre enklere. Brukt toUpperCase for
+å gjøre søk case insensitive. Refaktorere ved å bruke insensitive, nevnt i forelesning. */
 function mainSearch() {
 	var results = [];
 
@@ -73,9 +75,6 @@ function searchForTitle() {
 			addMoviePicture();
     }
 }
-
-
-
 
 
 function searchForActor() {
@@ -100,6 +99,19 @@ function searchForDirector() {
 }
 
 
+/* Funker ikke. Finne ut hvordan hente ut value fra array uten noen identifikasjon. */
+function searchForGenre() {
+	var results = [];
+
+	for (var i in genres_object) {
+		genre_details = genres_object[i];
+		if ((genre_details != null) && (genre_details).includes(query_params.genre))
+			console.log(genre_details);
+		
+    }
+}
+
+
 
 function searchForCountry() {
 	var results = [];
@@ -109,12 +121,6 @@ function searchForCountry() {
 		if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.toUpperCase()))
 			addMoviePicture();
     }
-}
-
-
-/* Makes the search function case insensitive */
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
@@ -165,6 +171,7 @@ window.onload = function() {
 	if (query_params.genre) {
         genre = document.getElementById("genre");
 		genre.innerHTML = query_params.genre;
+		searchForGenre();
     }
 	
 	if (query_params.country) {
