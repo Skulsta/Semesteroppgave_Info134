@@ -74,7 +74,7 @@
 		<section class="main-content">
   
     	<!-- Skjemaet gir mulighet for å ha en mer avansert søk. -->
-    	<form action="#" name="search">
+    	<form action="sokeresultat.html" name="search">
 		<div>
 			<h1><center>Avansert søk</center></h1>
 		</div>
@@ -82,7 +82,7 @@
 			<legend>Søk</legend>
 			<div class="advancedField">
 				<label for="film_title">Film tittel</label>
-				<input id="title" name="title" class="advancedSearch" type="text" placeholder="e.g. King Kong" >
+				<input id="film_title" name="film_title" class="advancedSearch" type="text" placeholder="e.g. King Kong" >
 			</div>
 			<div class="advancedField">
 				<label for="actor">Skuespiller</label>
@@ -101,7 +101,7 @@
 				<input id="country" name="country" class="advancedSearch" type="text" placeholder="Frankrike">
 			</div>	
 		</fieldset>
-		<input type="submit" name="submit" id="submit_search" value="Søk">
+		<input class="søkButton" type="submit" value="Søk">
 	</form>
 
 

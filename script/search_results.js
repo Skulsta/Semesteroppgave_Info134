@@ -53,21 +53,41 @@ function addMoviePicture() {
 }
 
 
+function mainSearch() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase()))
+			addMoviePicture();
+    }
+}
+
+
 function searchForTitle() {
 	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase() || query_params.film_title.toUpperCase())) {
+		if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase()))
 			addMoviePicture();
-
-			/* Adds the title to the page. Commented out for a later implementation.
-			title = document.createTextNode(movie_details["otitle"]);
-			film_title.appendChild(title);
-			*/
-       	}
     }
 }
+
+
+
+
+
+function searchForActor() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		if ((movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
+			addMoviePicture();
+    }
+}
+
 
 /* Makes the search function case insensitive */
 function capitalizeFirstLetter(string) {
@@ -97,7 +117,7 @@ window.onload = function() {
 	if (query_params.main_search) {
     	main_search = document.getElementById("main_search");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
-		searchForTitle();
+		mainSearch();
 	}
 
 	
@@ -110,6 +130,7 @@ window.onload = function() {
 	if (query_params.actor) {
         actor = document.getElementById("actor");
 		actor.innerHTML = query_params.actor;
+		searchForActor();
     }
 	
 	if (query_params.director) {
