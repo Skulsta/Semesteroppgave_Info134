@@ -83,9 +83,30 @@ function searchForActor() {
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if (movie_details["folk"] === null)
-			console.log("Faen.");
-		else if ((movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
+		if ((movie_details["folk"] != null) && (movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
+			addMoviePicture();
+    }
+}
+
+
+function searchForDirector() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		if ((movie_details["dir"] != null) && (movie_details["dir"].toUpperCase()).includes(query_params.director.toUpperCase()))
+			addMoviePicture();
+    }
+}
+
+
+
+function searchForCountry() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		movie_details = movies_object[movie_id];
+		if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.toUpperCase()))
 			addMoviePicture();
     }
 }
@@ -138,6 +159,7 @@ window.onload = function() {
 	if (query_params.director) {
 		director = document.getElementById("director");
 		director.innerHTML = query_params.director;
+		searchForDirector();
     }
 	
 	if (query_params.genre) {
@@ -148,6 +170,7 @@ window.onload = function() {
 	if (query_params.country) {
         country = document.getElementById("country");
 		country.innerHTML = query_params.country;
+		searchForCountry();
     }
 }
 	
