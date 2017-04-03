@@ -40,16 +40,18 @@ function addMoviePicture() {
        		link_pic.style.width = '140px';
 
        		var pic_id = 0;
-       		if (movie_id > 1000)
+       		if (movie_id > 1000) 
        			pic_id = movie_id.toString().charAt(0);
+       		
 
-    		src = 'http://vindkast.infomedia.uib.no/mediadb/images/o/' + pic_id + '/' + movie_id + '.jpg';
+    		var src = 'http://nelson.uib.no/o/' + pic_id + '/' + movie_id + '.jpg';
     		link_pic.src = src;
 
     		item_link.appendChild(link_pic);
 
        		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
        		results.appendChild(item_link); 
+
 }
 
 

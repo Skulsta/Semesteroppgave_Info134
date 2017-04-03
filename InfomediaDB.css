@@ -240,6 +240,12 @@ fieldset {
 	align-items: center;
 }
 
+#all_movies {
+	display: flex;
+	list-style: none;
+
+}
+
 main {
 	display: flex;
 	flex-grow: 1;

@@ -222,7 +222,7 @@ main {
 	flex-wrap: wrap;
 }
 
-.forsideBilde {
+#forsideBilde {
 	height: 200px;
 	width: 150px;
 	padding-top: 5px;
