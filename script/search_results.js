@@ -4,32 +4,6 @@ function search_for_X() {
 }
 */
 
-/*
-function searchForTitle() {
-
-	var results = [];
-
-	for (movie_id in movies_object) {
-		movie_details = movies_object[movie_id];
-		// Comparing input to titles in movies_object. Making them upper case in order to make them case insensitive.
-		if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase())) {
-			list_item = document.createElement("li");
-			item_link = document.createElement("A");
-			item_link.href = "show_movie.html?id=" + movie_id;
-			link_text = document.createTextNode(movie_details["otitle"]);
-       		item_link.appendChild(link_text);
-	
-       		list_item.appendChild(item_link);
-       		film_title.appendChild(list_item); 
-    	}
-    }
-
-    	for (var i = 0; i < 5; i++){
-        results.push(film_title[i]);
-    	}
-
-}
-*/
 
 function addMoviePicture() {
 			item_link = document.createElement("A");
@@ -49,7 +23,7 @@ function addMoviePicture() {
 
     		item_link.appendChild(link_pic);
 
-       		/* To Vegar: Want to put the picture somewhere else on the site? Edit film_title to your id here. */
+       		/* Want to put the picture somewhere else on the site? Edit film_title to your id here. */
        		results.appendChild(item_link); 
 
 }
