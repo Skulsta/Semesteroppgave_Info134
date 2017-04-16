@@ -3,15 +3,16 @@ creating new elements and adding information from the movies. */
 
 var movie_id = 2345; // Global variable so that the different categories don't just repeat the same movies.
 
+left = document.getElementsByClassName("left");
 
 window.onload = function() {
-    addMoviePicture();
-
-    }
+    addMoviePicture(0);
+    addMoviePicture(1);
+    addMoviePicture(2);
+}
 
 /** Adds the picture of a movie and a link to the movies' web page. */
-function addMoviePicture() {
-    left = document.getElementsByClassName("left");
+function addMoviePicture(num) {
 
     main_bilder = document.createElement("section");
     main_bilder.className = "main_bilder";
@@ -25,8 +26,8 @@ function addMoviePicture() {
             dropDown = document.createElement("div");
             dropDown.className = "dropDown";
 
-            dropDownKnapp = document.createElement("div");
-            dropDownKnapp.className = "dropDownKnapp";
+            dropKnapp = document.createElement("div");
+            dropKnapp.className = "dropKnapp";
 
             item_link = document.createElement("A");
             item_link.href = "show_movie.html?id=" + movie_id;
@@ -170,8 +171,6 @@ function addMoviePicture() {
             vurderingStar.src = starSrc;
 
 
-
-
             
 
 
@@ -204,17 +203,17 @@ function addMoviePicture() {
 
             item_link.appendChild(forsideBilde);
 
-            dropDownKnapp.appendChild(item_link);
+            dropKnapp.appendChild(item_link);
 
 
-            dropDown.appendChild(dropDownKnapp);
+            dropDown.appendChild(dropKnapp);
 
             dropDown.appendChild(dropDownInnholdFilm);
 
 
             main_bilder.appendChild(dropDown);
 
-            left[0].appendChild(main_bilder);
+            left[num].appendChild(main_bilder);
 
 
             movie_id++;

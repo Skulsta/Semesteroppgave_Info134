@@ -257,7 +257,7 @@ main {
 	padding: 10px;
 }
 
-.main-bilder {
+.main_bilder {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
