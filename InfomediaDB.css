@@ -240,7 +240,7 @@ fieldset {
 	align-items: center;
 }
 
-#all_movies {
+.all_movies {
 	display: flex;
 	list-style: none;
 
@@ -258,6 +258,14 @@ main {
 }
 
 .main-bilder {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #f1f1f1;
+
+}
+
+.main_bilder {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;

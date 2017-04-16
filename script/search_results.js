@@ -6,7 +6,7 @@ function search_for_X() {
 
 
 function addMoviePicture() {
-			item_link = document.createElement("A");
+			var item_link = document.createElement("A");
 			item_link.href = "show_movie.html?id=" + movie_id;
 
        		link_pic = document.createElement('img');
@@ -31,7 +31,6 @@ function addMoviePicture() {
 /* Mange funksjoner som gjør nesten helt det samme. Mulig dette kan gjøre enklere. Brukt toUpperCase for
 å gjøre søk case insensitive. Refaktorere ved å bruke insensitive, nevnt i forelesning. */
 function mainSearch() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
@@ -42,7 +41,6 @@ function mainSearch() {
 
 
 function searchForTitle() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
@@ -53,7 +51,6 @@ function searchForTitle() {
 
 
 function searchForActor() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
@@ -64,7 +61,6 @@ function searchForActor() {
 
 
 function searchForDirector() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
@@ -76,7 +72,6 @@ function searchForDirector() {
 
 /* Funker ikke. Finne ut hvordan hente ut value fra array uten noen identifikasjon. */
 function searchForGenre() {
-	var results = [];
 
 	for (var i in genres_object) {
 		genre_details = genres_object[i];
@@ -87,7 +82,6 @@ function searchForGenre() {
 }
 
 function sistReturnerte() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		for (var i = 0; i < 15; i++) {
@@ -100,11 +94,10 @@ function sistReturnerte() {
 
 
 function searchForCountry() {
-	var results = [];
 
 	for (movie_id in movies_object) {
 		movie_details = movies_object[movie_id];
-		if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.toUpperCase()))
+		if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.substring(0,3).toUpperCase()))
 			addMoviePicture();
     }
 }
