@@ -127,14 +127,69 @@ function addMoviePicture() {
             if (content == null)
                 content = " [ Ingen beskrivelse ] ";
 
-            if (content.length > 140)
-                content = content.substring(0,140) + "...";
+            if (content.length > 100)
+                content = content.substring(0,100) + "...";
             description.textContent = content;
+
+
+            /** Add logo and link for "Vurdering" and "Min liste". */
+
+            /** The section box that contains the elements. */
+            var forsideButtons = document.createElement("section");
+            forsideButtons.className = "forsideButtons";
+
+
+            /** Button for my list */
+            var minListeButton = document.createElement("A");
+            minListeButton.className = "minListeButton";
+
+            var minListeButtonPic = document.createElement("img");
+            minListeButtonPic.className = "ikon";
+            var listSrc = "pluss_icon.ico";
+            minListeButtonPic.src = listSrc;
+
+            var minListeTekst = document.createTextNode("Min liste");
+
+            minListeButton.appendChild(minListeButtonPic);
+
+            minListeButton.appendChild(minListeTekst);
+
+
+
+
+
+            /** Button for review button */
+            var vurdering = document.createElement("A");
+            vurdering.className = "vurdering";
+
+            var vurderingTekst = document.createTextNode("Vurdering");
+
+            /** Get the star icon next to the rating. REPEATING MYSELF, REMEMBER TO FIX. */
+            vurderingStar = document.createElement("img");
+            vurderingStar.className = "star";
+            vurderingStar.src = starSrc;
+
+
+
+
+            
+
+
 
 
             /** A lot of appending children */
 
+            vurdering.appendChild(vurderingStar);
+
+            vurdering.appendChild(vurderingTekst);
+
+
+            forsideButtons.appendChild(vurdering);
+
+            forsideButtons.appendChild(minListeButton);
+
             movieTitle.appendChild(boldTitle);
+
 
             dropDownInnholdFilm.appendChild(ratingItem);
 
@@ -143,6 +198,8 @@ function addMoviePicture() {
             dropDownInnholdFilm.appendChild(movieTitle);
 
             dropDownInnholdFilm.appendChild(description);
+
+            dropDownInnholdFilm.appendChild(forsideButtons);
 
 
             item_link.appendChild(forsideBilde);
