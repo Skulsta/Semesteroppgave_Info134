@@ -16,9 +16,15 @@
 		<link rel="stylesheet" href="InfomediaDB.css">
 
 		<title>InfomediaDB</title>
-		
-		<script type="text/javascript" src="script/object.js"></script>
+
 		<script type="text/javascript" src="script/link_preperation.js"></script>
+
+		<script type="text/javascript" src="script/search_results.js"></script>
+		<script type="text/javascript" src="script/object.js"></script>
+    	<script type="text/javascript" src="script/genres.js"></script>
+    	<script type="text/javascript" src="script/reviews.js"></script>
+    	<script type="text/javascript" src="script/query_params.js"></script>
+    	<script type="text/javascript" src="script/all_movies.js"></script>
 
 	</head>
 
@@ -69,11 +75,23 @@
 				<main>
 				
 					<section class="main-content">
-						<h3>Sist returnerte filmer</h3>
-						<div id = "all_movies"></div>
-					</section>
 
-				</section>
+
+
+					<!-- This is the whole "Sist returnerte" section -->
+						<h3>Sist returnerte</h3>
+						<section class="main-bilder">
+							<aside class="left">
+								<a class="forsideBilde" id="all_movies"></a>	
+							</aside>
+						</section>
+
+						<!-- "Sist returnerte" ending here -->
+
+
+
+
+
 					<aside class="left">
 					<h3>Nyeste filmer</h3>
 						<section class="main-bilder">

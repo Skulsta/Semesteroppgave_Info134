@@ -23,9 +23,8 @@ function addMoviePicture() {
 
     		item_link.appendChild(link_pic);
 
-       		/* Want to put the picture somewhere else on the site? Edit film_title to your id here. */
+       		/* Want to put the picture somewhere else on the site? Edit results to your id here. */
        		results.appendChild(item_link); 
-
 }
 
 
@@ -87,6 +86,17 @@ function searchForGenre() {
     }
 }
 
+function sistReturnerte() {
+	var results = [];
+
+	for (movie_id in movies_object) {
+		for (var i = 0; i < 15; i++) {
+			if (movies_object[movie_id] != null)
+				addMoviePicture();
+		}	
+	}
+}
+
 
 
 function searchForCountry() {
@@ -127,7 +137,7 @@ window.onload = function() {
 
 	
 	if (query_params.film_title) {
-        film_title = document.getElementById("film_title");
+        film_title = document.getElementById("film_title");		// <-- Not really necesarry.
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
 		searchForTitle();
 	}
