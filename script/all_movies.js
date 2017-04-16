@@ -65,8 +65,6 @@ function addMoviePicture() {
             left[0].appendChild(main_bilder);
 
 
-            
-
 
             movie_id++;
             i++;
