@@ -303,10 +303,7 @@ ol {
 }
 
 .forsideBilde:hover {
-	width: 160px;
-    height: 220px;
-    transition: width 0.6s, height 0.6s;
-	transition-timing-function: ease-out;
+	
 }
 
 
