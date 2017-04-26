@@ -264,7 +264,7 @@ a:visited {
 .kommentarer {
 	display: flex;
 	flex-direction: column;
-	order: 0;
+	order: 2;
 }
 
 .kommentarInput {
@@ -362,6 +362,7 @@ footer {
 	}
 
 	.aside {
+		order: 0;
 		flex-direction: column;
 		margin-left: 10px;
 		justify-content: flex-start;
@@ -442,4 +443,42 @@ footer {
 	margin-left: 15px;
 	align-items: center;
 	}
+
+	table {
+		border-collapse: collapse;
+		border: none;
+	}
+
+	
+
+	tr:nth-child(odd) {
+		background-color: #E2F1FF;
+	}
+
+	td,th {
+		border: none;
+		padding: 8px;
+	}
+
+	#tabell {
+		display: flex;
+		order: 2;
+		flex-direction: row;
+		margin-left: 10px;
+	}
+
+	#genre_stat_table {
+		margin-bottom: 20px;
+		margin-left: 10px;
+	}
+
+	#review_stat_table {
+		margin-left: 10px;
+	}
+
+	#genre {
+		display: flex;
+		flex-direction: column;
+	}
+
 }
