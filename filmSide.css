@@ -222,24 +222,6 @@ main {
 	flex-wrap: wrap;
 }
 
-#forsideBilde {
-	height: 200px;
-	width: 150px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 5px;
-	order: -1;
-}
-
-/*Youtube trailer*/
-.video {
-	flex-grow: 1;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	order: 3;
-	height: 220px;
-}
-
 a:link {
 	text-decoration: none;
 	color: black;
@@ -364,7 +346,7 @@ footer {
 	.aside {
 		order: 0;
 		flex-direction: column;
-		margin-left: 10px;
+		margin-right: 20px;
 		justify-content: flex-start;
 	}
 
@@ -402,10 +384,11 @@ footer {
 		flex-grow: 1;
 	}
 
-	.forsideBilde {
+	#cover {
 		height: 275px;
-		width: 200px;
-		order: 1;
+		width: 210px;
+		margin-bottom: 10px;
+		margin-right: 10px;
 	}
 
 	.minListeButton {
@@ -476,7 +459,17 @@ footer {
 		margin-left: 10px;
 	}
 
+	#movie_stat_table {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
 	#genre {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#beskrivelse {
 		display: flex;
 		flex-direction: column;
 	}
