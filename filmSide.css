@@ -289,22 +289,6 @@ a:visited {
 	width: 50px;
 }
 
-	table {
-		border-collapse: collapse;
-		border: none;
-	}
-
-	
-
-	tr:nth-child(odd) {
-		background-color: #E2F1FF;
-	}
-
-	td,th {
-		border: none;
-		padding: 8px;
-	}
-
 	#tabell {
 		display: flex;
 		order: 2;
@@ -313,20 +297,31 @@ a:visited {
 		width: 90%;
 	}
 
-	#genre_stat_table {
+	#genre {
+		margin-top: 10px;
+		display: flex;
+		order: 3;
+		padding: 2px;
+		background-color: #f1f1f1;
+		border-radius: 15px;
+		margin-left: 10px;
+		height: 35px;
+		justify-content: center;
+		width: 90px;
+		
+
+	}
+
+	#review {
 		margin-top: 10px;
 	}
 
-	#review_stat_table {
-		margin-top: 10px;
-	}
-
-	#movie_stat_table {
+	#movie {
 		display: flex;
 		flex-direction: column-reverse;
 	}
 
-	#genre {
+	#genreOgReview {
 		display: flex;
 		flex-direction: column;
 	}
@@ -419,8 +414,7 @@ footer {
 
 	.aside {
 		display: flex;
-		flex-wrap: wrap;
-		width: 50%;
+		width: 72%
 	}
 
 	.skuespiller {
@@ -436,10 +430,6 @@ footer {
 	.infoFilm {
 		display: flex;
 
-	}
-
-	.skuespillerBilde {
-		width: 100%;
 	}
 
 	.forsideInnhold {
@@ -476,7 +466,7 @@ footer {
 		flex-direction: row;
 	}
 
-	#genre {
+	#genreOgReview {
 		margin-top: 73px;
 		margin-left: 10px;
 	}
@@ -494,6 +484,23 @@ footer {
 
 	#intro {
 		width: 350px;
+	}
+
+	/*Gruppe med skuespiller bilder*/
+	.skuespiller {
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	width: 90px;
+	background-color: #f1f1f1;
+	padding: 4px;
+	height: 170px;
+	margin-bottom: 10px;
+	}
+
+	.skuespillerBilde{
+	height: 130px;
+	width: 90px;
 	}
 
 }

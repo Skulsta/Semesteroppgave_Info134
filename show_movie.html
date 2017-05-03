@@ -85,6 +85,8 @@
               <img class="star" alt="stjerne" src="star-icon.png">
               <p>Vurdering</p>
             </a>
+            <div id="genre" border=1>
+          <caption>Genre</caption></div>
           </section>
           </section>
 
@@ -96,27 +98,23 @@
 
       <section id="beskrivelse">
         <h2 id="otitle"></h2>        
-        <table id="movie_stat_table" border=1>
-          <tr>
-        <td align="center"></td><td align="center"></td>
-          </tr>
-        </table>
+        <div id="movie" border=1></div>
       </section>
 
-      <section id="genre">
-        <table id="genre_stat_table" border=1>
-          <caption>Genre</caption>
-          <tr>
-        <td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-          </tr>
-        </table>
-        
-        <table id="review_stat_table" border=1>
-          <caption>Vurdering</caption>
-          <tr>
-        <td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-          </tr>
-        </table>
+      <section id="reviews">
+        <div id="review" border=1>
+          <caption>Vurdering</caption></div>
+
+          <!--Vurdering av film/kommentarer-->
+          <section class="kommentarer">
+            <p class="overskrift">Skriv en kommentar</p>
+
+            <form action="#" name="kommentarForm" id="kommentarForm">
+              <textarea id="kommentarArea" name="kommentar"></textarea> 
+              
+              <input id="knapp" type="submit" name="submit" value="Lagre">
+            </form>
+          </section>
       </section> 
 
     </section>
@@ -150,19 +148,6 @@
         </aside>
 
   </body>
-
-          <!--Vurdering av film/kommentarer-->
-          <section class="kommentarer">
-            <p class="overskrift">Vurderinger</p>
-            <ul id="kommentarList"></ul>
-
-            <form action="#" name="kommentarForm" id="kommentarForm">
-              <textarea id="kommentarArea" name="kommentar"></textarea> 
-              
-              <input id="knapp" type="submit" name="submit" value="Lagre">
-            </form>
-          </section>
-
         </section>
       </section>
     </main>

@@ -106,7 +106,7 @@ window.onload = function() {
     title_element.innerHTML = movie_object["otitle"];
     
     // add a "debug-table" on the bottom showing all elements from movie_object
-    stats_table = document.getElementById("movie_stat_table");
+    stats_table = document.getElementById("movie");
     for (key in movie_object) {
         left = document.createTextNode(key);
         right = document.createTextNode(movie_object[key]);
@@ -114,15 +114,15 @@ window.onload = function() {
     }
     
     // add a "debug-table" on the bottom showing all genre info
-    genre_table = document.getElementById("genre_stat_table");
+    genre_table = document.getElementById("genre");
     for (var i in genre_object) {
 		left = document.createTextNode(i);
-		right = document.createTextNode(genre_object[i]);
+		right = document.createTextNode(genre_object);
 		add_row(genre_table, left, right);
     }
 
     // review object debug-table
-    review_table = document.getElementById("review_stat_table");
+    review_table = document.getElementById("review");
     for (key in review_object) {
 	left = document.createTextNode(key);
 	right = document.createTextNode(review_object[key]);
