@@ -289,6 +289,11 @@ ol {
 	padding: 10px;
 }
 
+#left {
+	flex: 1;
+	padding: 10px;
+}
+
 .right {
 	flex: 1;
 	padding: 10px;
