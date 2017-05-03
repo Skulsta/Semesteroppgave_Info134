@@ -17,13 +17,11 @@ function add_row(table, left, right) {
 }
 
 function addMoviePicture() {
-            movie_id = movies_object.movie_id;
+            movie_id = query_params.id;
             item_link = document.createElement("A");
-            item_link.href = "show_movie.html?id=" + movie_id;
 
             link_pic = document.createElement('img');
-            link_pic.style.height = '200px';
-            link_pic.style.width = '140px';
+            
 
             var pic_id = 0;
             if (movie_id > 1000) 
@@ -32,6 +30,7 @@ function addMoviePicture() {
 
             var src = 'http://nelson.uib.no/o/' + pic_id + '/' + movie_id + '.jpg';
             link_pic.src = src;
+            link_pic.id = "cover"
 
             item_link.appendChild(link_pic);
 

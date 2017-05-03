@@ -65,6 +65,29 @@
     </header>
 
     <main>
+      <section class="mainSection">
+
+        <section class="forsideInnhold">
+          <!--Cover bilde The Intouchables-->
+          <div id="forsideBilde"></div>
+
+          <!--Knapper til vurdering og min liste-->
+          <section class="forsideButtons">
+            <a class="minListeButton" href="#">
+              <img class="ikon" alt="+" src="pluss_icon.ico">
+              <p>Min liste</p>
+            </a>
+
+            <a class="vurdering" href="#">
+              <img class="star" alt="stjerne" src="star-icon.png">
+              <p>Vurdering</p>
+            </a>
+          </section>
+        </section>
+
+        
+  <!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
+  <section id="tabell">
       <aside class="aside">
         <!--skuespiller bilder som er lenket til skuespiller side-->
         <a class="skuespiller" href="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">
@@ -93,39 +116,14 @@
         </a>
       </aside>
 
-      <section class="mainSection">
-
-        <section class="forsideInnhold">
-          <!--Cover bilde The Intouchables-->
-          <div id="forsideBilde" alt="moviePicture"></div>
-
-          <!--Knapper til vurdering og min liste-->
-          <section class="forsideButtons">
-            <a class="minListeButton" href="#">
-              <img class="ikon" alt="+" src="pluss_icon.ico">
-              <p>Min liste</p>
-            </a>
-
-            <a class="vurdering" href="#">
-              <img class="star" alt="stjerne" src="star-icon.png">
-              <p>Vurdering</p>
-            </a>
-          </section>
-
-          <!--Youtube trailer til The Intouchables-->
-          <iframe class="video" src="https://www.youtube.com/embed/34WIbmXkewU" alt="The Intouchables" frameborder="0" allowfullscreen></iframe>
-        </section>
-
-            <h2 id="otitle"></h2>
-  <!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
-  <section id="tabell">
-      <hr>
-      <table id="movie_stat_table" border=1>
-        <caption></caption>
-        <tr>
-      <td align="center"></td><td align="center"></td>
-        </tr>
-      </table>
+      <section id="beskrivelse">
+        <h2 id="otitle"></h2>        
+        <table id="movie_stat_table" border=1>
+          <tr>
+        <td align="center"></td><td align="center"></td>
+          </tr>
+        </table>
+      </section>
 
       <section id="genre">
         <table id="genre_stat_table" border=1>
