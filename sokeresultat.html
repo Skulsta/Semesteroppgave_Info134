@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
+<head>
 
-		<meta charset="utf-8" />
+	<meta charset="utf-8" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta name = "description" content ="Infomedia MediaDB">
+	<meta name = "description" content ="Infomedia MediaDB">
 
-		<meta name = "author" content ="Vegar Ellingsen og Stian Skulstad">
+	<meta name = "author" content ="Vegar Ellingsen og Stian Skulstad">
 
-		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
 
-		<link rel="stylesheet" href="InfomediaDB.css">
+	<link rel="stylesheet" href="InfomediaDB.css">
 
-		<title>InfomediaDB</title>
+	<title>InfomediaDB</title>
 
-		<script type="text/javascript" src="script/search_results.js"></script>
-		<script type="text/javascript" src="script/object.js"></script>
-    	<script type="text/javascript" src="script/genres.js"></script>
-    	<script type="text/javascript" src="script/reviews.js"></script>
-    	<script type="text/javascript" src="script/query_params.js"></script>
-    	<script type="text/javascript" src="script/link_preperation.js"></script>
+	<script type="text/javascript" src="script/search_results.js"></script>
+	<script type="text/javascript" src="script/object.js"></script>
+	<script type="text/javascript" src="script/genres.js"></script>
+	<script type="text/javascript" src="script/reviews.js"></script>
+	<script type="text/javascript" src="script/query_params.js"></script>
+	<script type="text/javascript" src="script/link_preperation.js"></script>
 	
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<!--header med hjemknapp og søkfunksjon-->
-		<header>
-			<section class="top">
+	<!--header med hjemknapp og søkfunksjon-->
+	<header>
+		<section class="top">
 			<form action="sokeresultat.html" class="søk">
-			<nav>
-				<input id="main_search" name="main_search" class="searchInput" type="text" placeholder="   Søk...">
-				<input class="søkButton" type="submit"  value="Søk">
-				<a class="avansert_sok" href="sokeresultat.html">Avansert søk</a>
-			</nav>
+				<nav>
+					<input id="main_search" name="main_search" class="searchInput" type="text" placeholder="   Søk...">
+					<input class="søkButton" type="submit"  value="Søk">
+					<a class="avansert_sok" href="sokeresultat.html">Avansert søk</a>
+				</nav>
 			</form>
 
 			<!--DropDown meny til liten skjerm-->
@@ -69,41 +69,41 @@
 
 			</section>
 		</section>
-		</header>
+	</header>
 
-		<main>
+	<main>
 		<section class="main-content">
-  
-    	<!-- Skjemaet gir mulighet for å ha en mer avansert søk. -->
-    	<form action="sokeresultat.html" name="search">
-		<div>
-			<h1><center>Avansert søk</center></h1>
-		</div>
-		<fieldset>
-			<legend>Søk</legend>
-			<div class="advancedField">
-				<label for="film_title">Film tittel</label>
-				<input id="film_title" name="film_title" class="advancedSearch" type="text" placeholder="e.g. King Kong" >
-			</div>
-			<div class="advancedField">
-				<label for="actor">Skuespiller</label>
-				<input id="actor" name="actor" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
-			</div>
-			<div class="advancedField">
-				<label for="director">Regissør</label>
-				<input id="director" name="director" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
-			</div>
-			<div class="advancedField">
-				<label for="genre">Sjanger</label>
-				<input id="genre" name="genre" class="advancedSearch" type="text" placeholder="e.g. Drama">
-			</div>
-			<div class="advancedField">
-				<label for="country">Land</label>
-				<input id="country" name="country" class="advancedSearch" type="text" placeholder="e.g. Fra, Nor or USA">
-			</div>	
-		</fieldset>
-		<input class="søkButton" type="submit" value="Søk">
-	</form>
+			
+			<!-- Skjemaet gir mulighet for å ha en mer avansert søk. -->
+			<form action="sokeresultat.html" name="search">
+				<div>
+					<h1><center>Avansert søk</center></h1>
+				</div>
+				<fieldset class ="søkform">
+					<legend>Søk</legend>
+					<div class="advancedField">
+						<label for="film_title">Film tittel</label>
+						<input id="film_title" name="film_title" class="advancedSearch" type="text" placeholder="e.g. King Kong" >
+					</div>
+					<div class="advancedField">
+						<label for="actor">Skuespiller</label>
+						<input id="actor" name="actor" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
+					</div>
+					<div class="advancedField">
+						<label for="director">Regissør</label>
+						<input id="director" name="director" class="advancedSearch" type="text" placeholder="e.g. Tom Hanks" >
+					</div>
+					<div class="advancedField">
+						<label for="genre">Sjanger</label>
+						<input id="genre" name="genre" class="advancedSearch" type="text" placeholder="e.g. Drama">
+					</div>
+					<div class="advancedField">
+						<label for="country">Land</label>
+						<input id="country" name="country" class="advancedSearch" type="text" placeholder="e.g. Fra, Nor or USA">
+					</div>	
+				</fieldset>
+				<input class="søkButton" type="submit" value="Søk">
+			</form>
 
 
 			<aside id="left">
@@ -123,16 +123,16 @@
 				</ol> 
 				
 
-				</section> -->
+			</section> -->
 
-			</aside>
+		</aside>
 
-  	</section>
+	</section>
 
-  	</main>
+</main>
 
 
 <footer>InfomediaDB | <a href="mailto:post@vinfomediadb.no" target="_top"> Send Mail</a></footer>
 
-			</body>
-		</html>
+</body>
+</html>

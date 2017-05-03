@@ -116,32 +116,32 @@ fieldset {
 }
 
 .dropKnapp {
-    color: white;
+	color: white;
 	margin-right: 5px;
 	padding-top: 2px;
 	font-size: 16px;
-    border: none;
-    cursor: pointer;
+	border: none;
+	cursor: pointer;
 }
 
 
 /* Innhold i dropdown menyen */
 .dropDownInnhold {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
 }
 
 /* Knappene i drop down menyen */
 .dropDownInnhold a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-family: helvetica;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-family: helvetica;
 }
 
 /* Bytter farge på innhold i drop down menyen */
@@ -151,11 +151,11 @@ fieldset {
 
 /* Gjør drop down menyen synlig */
 .dropDown:hover .dropDownInnhold {
-    display: block;
+	display: block;
 }
 
 .dropDown:hover .dropKnapp {
-    background-color: darkgrey;
+	background-color: darkgrey;
 }
 
 .dropIcon {
@@ -168,17 +168,17 @@ fieldset {
 
 .dropDownInnholdFilm {
 	display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 5px;
-    font-family: helvetica;
-    font-size: 14px;
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	padding: 5px;
+	font-family: helvetica;
+	font-size: 14px;
 }
 
 .dropDown:hover .dropDownInnholdFilm {
-    display: block;
+	display: block;
 }
 
 .forsideButtons {
@@ -350,14 +350,14 @@ footer {
 @media (max-width: 375px) {
 
 	.forsideBilde {
-	height: 100px;
-	width: 70px;
-	margin: 5px;
-}
+		height: 100px;
+		width: 70px;
+		margin: 5px;
+	}
 
 	.bruker {
-	display: none;
-}
+		display: none;
+	}
 }
 
 @media (min-width: 768px) {
@@ -377,10 +377,10 @@ footer {
 	}
 
 	.bruker {
-	display: flex;
-	order: 3;
-	margin-left: 15px;
-	align-items: center;
+		display: flex;
+		order: 3;
+		margin-left: 15px;
+		align-items: center;
 	}
 
 	.searchInput {
@@ -407,10 +407,10 @@ footer {
 	}
 
 	.forsideBilde {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 5px;
-	order: -1;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		order: -1;
 	}
 }
 

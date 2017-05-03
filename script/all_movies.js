@@ -19,17 +19,17 @@ function addMoviePicture(num) {
 
     var i = 0;          // Should make sure only 14 movies are shown at each category.
     while (i < 14) {
-           
-           if (movies_object[movie_id] != null) {
-           addMovieLink();
+     
+     if (movies_object[movie_id] != null) {
+         addMovieLink();
 
-            left[num].appendChild(main_bilder);
+         left[num].appendChild(main_bilder);
 
 
-            movie_id++;
-            i++;
-            
-            }
-            else movie_id = movie_id + 1;
-        }
-    }
+         movie_id++;
+         i++;
+         
+     }
+     else movie_id = movie_id + 1;
+ }
+}
