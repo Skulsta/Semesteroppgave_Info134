@@ -2,8 +2,15 @@
 function addMovieLink() {
 
 
+            // Tells the user to make a search. Dissapears when it is done.
+            kindReminder = document.getElementById("searchReminder")
+            if (kindReminder)
+                kindReminder.innerHTML = "";
 
-            movie_details = movies_object[movie_id];
+
+            for (var movies in movies_object)
+                movie_details = movies_object[movies];
+
 
             // prepare the link
             dropDown = document.createElement("div");
@@ -34,35 +41,6 @@ function addMovieLink() {
             dropDownInnholdFilm.className = "dropDownInnholdFilm";
 
 
-
-
-
-            /**
-            details = reviews_object[movie_id];
-
-            if (details) {
-            console.log(details);
-        }
-
-            
-            for (object in reviews_object) {
-                if (object == movie_id) {
-                    review_details = reviews_object[object];
-                    rating = document.createTextNode(review_details["rating"] + "/6");
-
-                    dropDownInnholdFilm.appendChild(rating);
-                }
-            }
-            
-
-
-
-            for (var object in reviews_object) {
-                if (object == movie_id)
-                console.log(object);
-                }
-
-                */
                 var rating = 0;
 
                 /** Retrieves rating from reviews.js. */
@@ -96,7 +74,8 @@ function addMovieLink() {
                 /** Movie title */
                 var movieTitle = document.createElement("p");
                 var boldTitle = document.createElement("b");
-                boldTitle.textContent = movie_details["otitle"];
+                if (movie_details["otitle"])
+                    boldTitle.textContent = movie_details["otitle"];
 
                 /** The movie description. Set a limit of 140 characters. */
                 var description = document.createElement("p");
@@ -153,7 +132,7 @@ function addMovieLink() {
 
 
 
-                /** A lot of appending children */
+                /** A lot of appending children to get the right formatting */
 
                 vurdering.appendChild(vurderingStar);
 
@@ -189,5 +168,4 @@ function addMovieLink() {
 
 
                 main_bilder.appendChild(dropDown);
-
             }

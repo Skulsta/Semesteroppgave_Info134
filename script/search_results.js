@@ -96,22 +96,12 @@ function searchForDirector() {
 
 
 
-function sistReturnerte() {
-
-	for (movie_id in movies_object) {
-		for (var i = 0; i < 15; i++) {
-			if (movies_object[movie_id] != null)
-				addMoviePicture();
-		}	
-	}
-}
-
 
 
 function searchForCountry() {
 
 	for (movie_id in movies_object) {
-		if (movieCounter < 14) {
+		if (movieCounter < 12) {
 			movie_details = movies_object[movie_id];
 			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.substring(0,3).toUpperCase()))
 				addMoviePicture();
@@ -120,23 +110,37 @@ function searchForCountry() {
 }
 
 
-function searchForGenre() {
+/**function searchForGenre() {
 
 	for (movie_id in genres_object) {
 		if (movieCounter < 14) {
 		movie_details = genres_object[movie_id];
-		if ((movie_details != null) && movie_details.includes(query_params.genre.toLowerCase()))
+		if ((movie_details != null) && movie_details.includes(query_params.genre.toLowerCase())) {
+			console.log (movie_details);
+			console.log(movie_id);
+		}
+
 		addMoviePicture();
 	}
 	}
 }
-
-
-
-/* Her kan dere implementere en display function som viser resulatetene av søket. For eksempel:
-function display_X() {
-}
 */
+
+function searchForGenre() {
+	for (movie_id in genres_object) {
+		if (movieCounter < 12) {
+		movie_details = movie_id;
+		movie_obj = genres_object[movie_id]
+		for (values in movie_obj) {
+			var genres = movie_obj[values];
+
+			if (genres === query_params.genre.toLowerCase()) {
+				addMoviePicture();
+					}
+				}
+			}
+		}
+	}
 /*
 	Denne metoden viser elementene på skjermen for brukeren
 	*/

@@ -73,13 +73,13 @@
 
 	<main>
 		<section class="main-content">
-			
+
 			<!-- Skjemaet gir mulighet for å ha en mer avansert søk. -->
-			<form action="sokeresultat.html" name="search">
+			<form action="#" name="search" id="avansertSøkForm">
 				<div>
 					<h1><center>Avansert søk</center></h1>
 				</div>
-				<fieldset class ="søkform">
+				<fieldset>
 					<legend>Søk</legend>
 					<div class="advancedField">
 						<label for="film_title">Film tittel</label>
@@ -101,13 +101,15 @@
 						<label for="country">Land</label>
 						<input id="country" name="country" class="advancedSearch" type="text" placeholder="e.g. Fra, Nor or USA">
 					</div>	
+					<input class="søkButton" type="submit" value="Søk">
 				</fieldset>
-				<input class="søkButton" type="submit" value="Søk">
+				
 			</form>
 
 
 			<aside id="left">
 				<h3> Resultat </h3>
+				<p id="searchReminder"> Utfør et søk for å se resultater. </p>
 				<!-- <section class="main-bilder">
 
 				<div id="pic"></div>

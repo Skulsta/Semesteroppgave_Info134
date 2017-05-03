@@ -21,11 +21,6 @@ header {
 	color: white;
 }
 
-fieldset {
-	background-color: #f1f1f1;
-	color: black;
-	display: flex;
-}
 
 .advancedField {
 	display: flex;
@@ -84,10 +79,18 @@ fieldset {
 	height: 35px;
 }
 
+
+/** Advanced search form */
+
+fieldset {
+	padding-left: 30px;
+}
+
 .advancedSearch {
 	width: 150px;
 	height: 20px;
 	border: thin solid black;
+	padding-right: 100px;
 }
 
 .søkButton {
@@ -96,6 +99,11 @@ fieldset {
 	height: 35px;
 	width: 50px;
 	margin-right: 5px;
+}
+
+#avansertSøkForm {
+	padding-right: 250px;
+	padding-left: 250px;
 }
 
 
@@ -360,6 +368,13 @@ footer {
 	}
 }
 
+
+fieldset {
+	background-color: #f1f1f1;
+	color: black;
+	display: flex;
+}
+
 @media (min-width: 768px) {
 
 	body {
@@ -412,6 +427,8 @@ footer {
 		padding-right: 5px;
 		order: -1;
 	}
+
+
 }
 
 
