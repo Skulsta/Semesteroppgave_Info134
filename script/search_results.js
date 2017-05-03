@@ -51,27 +51,6 @@ function searchForTitle() {
 
 function searchForActor() {
 
-	if (results.lenght > 0) {
-		for (movie_id in results) {
-			movie_details = results[movie_id];
-			if (!(movie_details["folk"].toUpperCase()).includes(query_params.director.toUpperCase()))
-				results.splice(movie_id);
-		}
-	}
-
-	else {
-		for (movie_id in movies_object) {
-			movie_details = movies_object[movie_id];
-			if ((movie_details["folk"] != null) && (movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
-				results.push(movie_id);
-		}
-	}
-}
-
-
-
-function searchForActor() {
-
 	for (movie_id in movies_object) {
 		if (movieCounter < 14) {
 			movie_details = movies_object[movie_id];
@@ -92,8 +71,6 @@ function searchForDirector() {
 		}
 	}
 }
-
-
 
 
 
@@ -146,7 +123,7 @@ window.onload = function() {
 
 	
 	if (query_params.film_title) {
-        film_title = document.getElementById("film_title"); 	// <-- Not really necesarry.
+        film_title = document.getElementById("film_title"); 
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
 		searchForTitle();
 	}

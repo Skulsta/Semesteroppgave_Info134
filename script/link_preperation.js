@@ -7,13 +7,16 @@ function addMovieLink() {
             if (kindReminder)
                 kindReminder.innerHTML = "";
 
-            if (movie_details) {
+
+            /** Used to display the right information when searching for movies. */
             for (var movies in movies_object)
                 if (movie_id === movies) {
-                    movie_details = movies_object[movies];
-                    console.log(movies);
+                    var movie_details = movies_object[movies];
                 }
-            }
+
+            /** To get pictures on the front page. */
+            movie_details = movies_object[movie_id];
+
 
 
             // prepare the link
