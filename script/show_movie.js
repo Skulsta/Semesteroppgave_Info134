@@ -16,6 +16,29 @@ function add_row(table, left, right) {
     table.appendChild(new_row);
 }
 
+function addMoviePicture() {
+            movie_id = movies_object.movie_id;
+            item_link = document.createElement("A");
+            item_link.href = "show_movie.html?id=" + movie_id;
+
+            link_pic = document.createElement('img');
+            link_pic.style.height = '200px';
+            link_pic.style.width = '140px';
+
+            var pic_id = 0;
+            if (movie_id > 1000) 
+                pic_id = movie_id.toString().charAt(0);
+            
+
+            var src = 'http://nelson.uib.no/o/' + pic_id + '/' + movie_id + '.jpg';
+            link_pic.src = src;
+
+            item_link.appendChild(link_pic);
+
+            /* Want to put the picture somewhere else on the site? Edit results to your id here. */
+            forsideBilde.appendChild(item_link); 
+}
+
 window.onload = function() {
     query_params = get_query_string_parameters();
     if (!query_params.id) {
@@ -69,4 +92,7 @@ window.onload = function() {
 	    add_row(review_table, left, right);
 	}
     }
+
+    addMoviePicture();
+
 };

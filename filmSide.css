@@ -476,6 +476,11 @@ footer {
 		margin-left: 10px;
 	}
 
+	#movie_stat_table {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
 	#genre {
 		display: flex;
 		flex-direction: column;
