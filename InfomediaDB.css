@@ -348,11 +348,15 @@ a:visited {
 footer {
 	background-color: #f1f1f1;
 	width: 100%;
-	color: white;
+	color: black;
 	border-top: 5px;
 	border-color: black;
 	text-decoration: none;
 	text-align: center;
+}
+
+a {
+	color: black;
 }
 
 @media (max-width: 375px) {
