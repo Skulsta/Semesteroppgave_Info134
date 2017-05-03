@@ -31,8 +31,7 @@ function mainSearch() {
 		if (movieCounter < 14) {
 			movie_details = movies_object[movie_id];
 			if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase()))
-				results.push(movie_details);
-			addMoviePicture();
+				addMoviePicture();
 		}
 	}
 }
@@ -103,60 +102,44 @@ function searchForCountry() {
 	for (movie_id in movies_object) {
 		if (movieCounter < 12) {
 			movie_details = movies_object[movie_id];
-			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.substring(0,3).toUpperCase()))
+			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).
+				includes(query_params.country.substring(0,3).toUpperCase())) {
 				addMoviePicture();
+			}
 		}
 	}
 }
 
 
-/**function searchForGenre() {
-
-	for (movie_id in genres_object) {
-		if (movieCounter < 14) {
-		movie_details = genres_object[movie_id];
-		if ((movie_details != null) && movie_details.includes(query_params.genre.toLowerCase())) {
-			console.log (movie_details);
-			console.log(movie_id);
-		}
-
-		addMoviePicture();
-	}
-	}
-}
-*/
 
 function searchForGenre() {
 	for (movie_id in genres_object) {
 		if (movieCounter < 12) {
-		movie_details = movie_id;
-		movie_obj = genres_object[movie_id]
-		for (values in movie_obj) {
-			var genres = movie_obj[values];
+			movie_details = movie_id;
+			movie_obj = genres_object[movie_id]
+			for (values in movie_obj) {
+				var genres = movie_obj[values];
 
-			if (genres === query_params.genre.toLowerCase()) {
-				addMoviePicture();
-					}
+				if (genres === query_params.genre.toLowerCase()) {
+					addMoviePicture();
 				}
 			}
 		}
 	}
-/*
-	Denne metoden viser elementene på skjermen for brukeren
-	*/
+}
 
 
 
 
-	window.onload = function() {
+window.onload = function() {
 
-		query_params = get_query_string_parameters();
+	query_params = get_query_string_parameters();
 
-		search_results = movies_object;
+	search_results = movies_object;
 
 
-		if (query_params.main_search) {
-			main_search = document.getElementById("main_search");
+	if (query_params.main_search) {
+		main_search = document.getElementById("main_search");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
 		mainSearch();
 	}

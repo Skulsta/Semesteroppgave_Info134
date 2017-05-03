@@ -7,9 +7,13 @@ function addMovieLink() {
             if (kindReminder)
                 kindReminder.innerHTML = "";
 
-
+            if (movie_details) {
             for (var movies in movies_object)
-                movie_details = movies_object[movies];
+                if (movie_id === movies) {
+                    movie_details = movies_object[movies];
+                    console.log(movies);
+                }
+            }
 
 
             // prepare the link
@@ -121,7 +125,7 @@ function addMovieLink() {
 
                 var vurderingTekst = document.createTextNode("Vurdering");
 
-                /** Get the star icon next to the rating. REPEATING MYSELF, REMEMBER TO FIX. */
+
                 vurderingStar = document.createElement("img");
                 vurderingStar.className = "star";
                 vurderingStar.src = starSrc;
