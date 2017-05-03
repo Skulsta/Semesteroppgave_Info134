@@ -39,7 +39,7 @@ function addMoviePicture() {
 }
 
 
-function trailerError() {
+function trailer() {
     var movie_details = movies_object[movie_id];
     var trailerId = movie_details["youtube trailer id"];
 
@@ -52,8 +52,7 @@ function trailerError() {
         if (content == null)
             content = " [ Ingen beskrivelse ] ";
 
-        if (content.length > 700)
-            content = content.substring(0,700) + "...";
+        if (content.length > 1)
             description.textContent = content;
             player.appendChild(description);
         }
@@ -66,6 +65,36 @@ function trailerError() {
             player.appendChild(video);
     }
 }
+
+/** The movie description.*/
+    function description() {
+        var movie_details = movie_object;
+        var description = document.createElement("p");
+        content = movie_details["description"];
+        
+        if (content == null) {
+            content = " [ Ingen beskrivelse ] ";
+        }
+        else {
+            description.textContent = content;
+            movie.appendChild(description);
+        }
+    }
+
+    /** The movie description.*/
+    function skuespillere() {
+        var movie_details = movie_object;
+        var skuespillere = document.createElement("p");
+        content = movie_details["folk"];
+        
+        if (content == null) {
+            content = " [ Ingen beskrivelse ] ";
+        }
+        else {
+            skuespillere.textContent = content;
+            folk.appendChild(skuespillere);
+        }
+    }
 
 /*
 function trailer() {
@@ -104,14 +133,15 @@ window.onload = function() {
     var title_element = document.getElementById("otitle");
     // title_element.appendChild(document.createTextNode(movie_object["otitle"]));    
     title_element.innerHTML = movie_object["otitle"];
-    
+
+
     // add a "debug-table" on the bottom showing all elements from movie_object
-    stats_table = document.getElementById("movie");
+    /*stats_table = document.getElementById("movie");
     for (key in movie_object) {
         left = document.createTextNode(key);
         right = document.createTextNode(movie_object[key]);
         add_row(stats_table, left, right);
-    }
+    }**/
     
     // add a "debug-table" on the bottom showing all genre info
     genre_table = document.getElementById("genre");
@@ -135,7 +165,8 @@ window.onload = function() {
     }
 
     addMoviePicture();
-
-    trailerError();
+    trailer();
+    description();
+    skuespillere();
 
 };

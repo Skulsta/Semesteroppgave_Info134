@@ -308,7 +308,7 @@ a:visited {
 		height: 35px;
 		justify-content: center;
 		width: 90px;
-		
+
 
 	}
 
@@ -396,7 +396,8 @@ footer {
 	main {
 		display: flex;
 		flex-direction: row;
-		width: 768px;
+		/*width: 768px;**/
+
 	}
 
 	header {
@@ -409,6 +410,7 @@ footer {
 
 	.mainSection {
 		flex-direction: column;
+		align-items: center;
 
 	}
 
@@ -466,11 +468,6 @@ footer {
 		flex-direction: row;
 	}
 
-	#genreOgReview {
-		margin-top: 73px;
-		margin-left: 10px;
-	}
-
 	#trailerOgBilde {
 		display: flex;
 		flex-direction: row;
@@ -501,6 +498,26 @@ footer {
 	.skuespillerBilde{
 	height: 130px;
 	width: 90px;
+	}
+
+	#reviews {
+		display: flex;
+		border-left: 2px solid;
+		border-color: lightgrey;
+		flex-direction: column;
+	}
+
+	#review {
+		margin-left:10px;
+	}
+
+	#beskrivelse {
+		width: 550px;
+		margin-right: 20px;
+	}
+
+	.kommentarer {
+		margin-left: 10px;
 	}
 
 }
