@@ -28,7 +28,7 @@
       <nav>
         <input class="searchInput" type="search" placeholder="   Søk...">
         <input class="søkButton" type="submit"  value="Søk">
-        <a class="avansert_sok" href="avansert_sok.html">Avansert søk</a>
+        <a class="avansert_sok" href="sokeresultat.html">Avansert søk</a>
       </nav>
       </form>
 
@@ -68,9 +68,12 @@
       <section class="mainSection">
 
         <section class="forsideInnhold">
-          <!--Cover bilde The Intouchables-->
+        <section id="bildeOgButtons">
+        <section id="trailerOgBilde">
+          <!--Cover bilde-->
           <div id="forsideBilde"></div>
-
+          <div id ="player"></div>
+        </section>
           <!--Knapper til vurdering og min liste-->
           <section class="forsideButtons">
             <a class="minListeButton" href="#">
@@ -82,73 +85,29 @@
               <img class="star" alt="stjerne" src="star-icon.png">
               <p>Vurdering</p>
             </a>
+            <div id="genre" border=1>
+          <caption>Genre</caption></div>
           </section>
+          </section>
+
         </section>
 
         
   <!-- Alt under er en enkelt formatert tabell som viser all informasjon som er tilgjengelig om denne filmen -->
   <section id="tabell">
-      <aside class="aside">
-        <!--skuespiller bilder som er lenket til skuespiller side-->
-        <a class="skuespiller" href="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">
-            <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/François_Cluzet.jpg" alt="François Cluzet">
-          <p>François Cluzet</p>
-        </a>
-
-        <a class="skuespiller" href="http://www.imdb.com/name/nm1082477/?ref_=tt_cl_t2">
-          <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Omar_Sy.jpg" alt="Omar Sy">
-          <p>Omar Sy</p>
-        </a>
-
-        <a class="skuespiller" href="http://www.imdb.com/name/nm1109153/?ref_=fn_al_nm_1">
-          <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Audrey_Fleurot.jpg" alt="Audrey Fleurot">
-          <p>Audrey Fleurot</p>
-        </a>
-
-        <a class="skuespiller" href="http://www.imdb.com/name/nm0494504/?ref_=fn_al_nm_1">
-          <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Anne_Le_Ny.png" alt="Anne Le Ny">
-          <p>Anne Le Ny</p>
-        </a>
-
-        <a class="skuespiller" href="http://www.imdb.com/name/nm1525639/?ref_=tt_cl_t5">
-          <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Joséphine_de_Meaux.png" alt="Joséphine de Meaux">
-          <p>Joséphine de Meaux</p>
-        </a>
-      </aside>
 
       <section id="beskrivelse">
         <h2 id="otitle"></h2>        
-        <table id="movie_stat_table" border=1>
-          <tr>
-        <td align="center"></td><td align="center"></td>
-          </tr>
-        </table>
+        <div id="movie" border=1></div>
       </section>
 
-      <section id="genre">
-        <table id="genre_stat_table" border=1>
-          <caption>Genre</caption>
-          <tr>
-        <td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-          </tr>
-        </table>
-        
-        <table id="review_stat_table" border=1>
-          <caption>Vurdering</caption>
-          <tr>
-        <td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-          </tr>
-        </table>
-      </section> 
-
-    </section>
-
-  </body>
+      <section id="reviews">
+        <div id="review" border=1>
+          <caption>Vurdering</caption></div>
 
           <!--Vurdering av film/kommentarer-->
           <section class="kommentarer">
-            <p class="overskrift">Vurderinger</p>
-            <ul id="kommentarList"></ul>
+            <p class="overskrift">Skriv en kommentar</p>
 
             <form action="#" name="kommentarForm" id="kommentarForm">
               <textarea id="kommentarArea" name="kommentar"></textarea> 
@@ -156,7 +115,39 @@
               <input id="knapp" type="submit" name="submit" value="Lagre">
             </form>
           </section>
+      </section> 
 
+    </section>
+
+     <aside class="aside">
+        <!--skuespiller bilder som er lenket til skuespiller side på imdb-->
+          <a class="skuespiller" href="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">
+              <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/François_Cluzet.jpg" alt="François Cluzet">
+            <p>François Cluzet</p>
+          </a>
+
+          <a class="skuespiller" href="http://www.imdb.com/name/nm1082477/?ref_=tt_cl_t2">
+            <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Omar_Sy.jpg" alt="Omar Sy">
+            <p>Omar Sy</p>
+          </a>
+
+          <a class="skuespiller" href="http://www.imdb.com/name/nm1109153/?ref_=fn_al_nm_1">
+            <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Audrey_Fleurot.jpg" alt="Audrey Fleurot">
+            <p>Audrey Fleurot</p>
+          </a>
+
+          <a class="skuespiller" href="http://www.imdb.com/name/nm0494504/?ref_=fn_al_nm_1">
+            <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Anne_Le_Ny.png" alt="Anne Le Ny">
+            <p>Anne Le Ny</p>
+          </a>
+
+          <a class="skuespiller" href="http://www.imdb.com/name/nm1525639/?ref_=tt_cl_t5">
+            <img class="skuespillerBilde" src="Filmer/The_Intouchables/Skuespillere_the_intouchables/Joséphine_de_Meaux.png" alt="Joséphine de Meaux">
+            <p>Joséphine de Meaux</p>
+          </a>
+        </aside>
+
+  </body>
         </section>
       </section>
     </main>

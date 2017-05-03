@@ -38,6 +38,48 @@ function addMoviePicture() {
             forsideBilde.appendChild(item_link); 
 }
 
+
+function trailerError() {
+    var movie_details = movies_object[movie_id];
+    var trailerId = movie_details["youtube trailer id"];
+
+    if(trailerId == "") {
+
+    var description = document.createElement("p");
+        content = movie_details["description"];
+        description.id = "intro";
+
+        if (content == null)
+            content = " [ Ingen beskrivelse ] ";
+
+        if (content.length > 700)
+            content = content.substring(0,700) + "...";
+            description.textContent = content;
+            player.appendChild(description);
+        }
+        else {
+            var video = document.createElement("iframe");
+
+            video.id = "trailer"
+            video.src = "https://www.youtube.com/embed/" + trailerId;
+
+            player.appendChild(video);
+    }
+}
+
+/*
+function trailer() {
+    var movie_id = movies_object[movie_id];
+    var trailerId = movie_id["youtube trailer id"];
+    var video = document.createElement("iframe");
+
+    video.id = "trailer"
+    video.src = "https://www.youtube.com/embed/" + trailerId;
+
+    player.appendChild(video);
+}
+**/
+
 window.onload = function() {
     query_params = get_query_string_parameters();
     if (!query_params.id) {
@@ -64,7 +106,7 @@ window.onload = function() {
     title_element.innerHTML = movie_object["otitle"];
     
     // add a "debug-table" on the bottom showing all elements from movie_object
-    stats_table = document.getElementById("movie_stat_table");
+    stats_table = document.getElementById("movie");
     for (key in movie_object) {
         left = document.createTextNode(key);
         right = document.createTextNode(movie_object[key]);
@@ -72,15 +114,15 @@ window.onload = function() {
     }
     
     // add a "debug-table" on the bottom showing all genre info
-    genre_table = document.getElementById("genre_stat_table");
+    genre_table = document.getElementById("genre");
     for (var i in genre_object) {
 		left = document.createTextNode(i);
-		right = document.createTextNode(genre_object[i]);
+		right = document.createTextNode(genre_object);
 		add_row(genre_table, left, right);
     }
 
     // review object debug-table
-    review_table = document.getElementById("review_stat_table");
+    review_table = document.getElementById("review");
     for (key in review_object) {
 	left = document.createTextNode(key);
 	right = document.createTextNode(review_object[key]);
@@ -93,5 +135,7 @@ window.onload = function() {
     }
 
     addMoviePicture();
+
+    trailerError();
 
 };

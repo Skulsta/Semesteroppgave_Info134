@@ -201,7 +201,6 @@ main {
 	background-color: #f1f1f1;
 	border-radius: 15px;
 	order: 2;
-	margin-left: 10px;
 	margin-top: 5px;
 	width: 90px;
 	height: 35px;
@@ -290,6 +289,60 @@ a:visited {
 	width: 50px;
 }
 
+	#tabell {
+		display: flex;
+		order: 2;
+		flex-direction: column;
+		margin-left: 10px;
+		width: 90%;
+	}
+
+	#genre {
+		margin-top: 10px;
+		display: flex;
+		order: 3;
+		padding: 2px;
+		background-color: #f1f1f1;
+		border-radius: 15px;
+		margin-left: 10px;
+		height: 35px;
+		justify-content: center;
+		width: 90px;
+		
+
+	}
+
+	#review {
+		margin-top: 10px;
+	}
+
+	#movie {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#genreOgReview {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#beskrivelse {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#bildeOgButtons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#cover {
+		height: 275px;
+		width: 190px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+
 footer {
 	background-color: #f1f1f1;
 	color: white;
@@ -301,19 +354,35 @@ footer {
 	order: 5;
 }
 
+.forsideButtons {
+		flex-direction: row;
+	}
+
 /* Små mobilskjermer */
-@media (max-width: 375px) {
+@media (max-width: 374px) {
 
-	.forsideBilde {
-	height: 150px;
-	width: 100px;
-	margin: 5px;
-	transition: width 0.6s, height 0.6s;
-	transition-timing-function: ease-out;
-}
+	#cover {
+		height: 150px;
+		width: 100px;
+		margin: 5px;
+		transition: width 0.6s, height 0.6s;
+		transition-timing-function: ease-out;
+	}
 
-.bruker {
-	display: none;
+	.bruker {
+		display: none;
+	}
+
+	#bildeOgButtons {
+		flex-direction: row;
+	}
+
+	.forsideButtons {
+		flex-direction: column;
+	}
+
+	.minListeButton{
+		margin-left: 0px;
 	}
 }
 
@@ -344,16 +413,12 @@ footer {
 	}
 
 	.aside {
-		order: 0;
-		flex-direction: column;
-		margin-right: 20px;
-		justify-content: flex-start;
+		display: flex;
+		width: 72%
 	}
 
 	.skuespiller {
 		margin-top: 10px;
-		width: 80px;
-		justify-content: center;
 	}
 
 	.info {
@@ -367,28 +432,9 @@ footer {
 
 	}
 
-	.skuespillerBilde {
-		height: 110px;
-		width: 80px;
-	}
-
-	.video {
-		flex-grow: 0;
-		order: 2;
-		width: 440px;
-		height: 275px;
-	}
-
 	.forsideInnhold {
-		flex-wrap: wrap;
-		flex-grow: 1;
-	}
-
-	#cover {
-		height: 275px;
-		width: 210px;
-		margin-bottom: 10px;
-		margin-right: 10px;
+		display: flex;
+		flex-direction: row;
 	}
 
 	.minListeButton {
@@ -401,23 +447,12 @@ footer {
 		margin-top: 5px;
 	}
 
-	.forsideButtons {
-		flex-direction: row;
-	}
-
 	.vurdering {
 		margin-left: 0px;
 	}
 
 	.searchInput {
 		width: 150px;
-	}
-
-	.bar {
-		display: flex;
-		background-color: lightgray;
-		color: white;
-		justify-content: flex-end;
 	}
 
 	.bruker {
@@ -427,51 +462,45 @@ footer {
 	align-items: center;
 	}
 
-	table {
-		border-collapse: collapse;
-		border: none;
-	}
-
-	
-
-	tr:nth-child(odd) {
-		background-color: #E2F1FF;
-	}
-
-	td,th {
-		border: none;
-		padding: 8px;
-	}
-
 	#tabell {
-		display: flex;
-		order: 2;
 		flex-direction: row;
+	}
+
+	#genreOgReview {
+		margin-top: 73px;
 		margin-left: 10px;
 	}
 
-	#genre_stat_table {
-		margin-bottom: 20px;
-		margin-left: 10px;
-	}
-
-	#review_stat_table {
-		margin-left: 10px;
-	}
-
-	#movie_stat_table {
+	#trailerOgBilde {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: row;
+	}	
+
+	#trailer {
+		width: 500px;
+		height: 275px;
+		border: none;
 	}
 
-	#genre {
-		display: flex;
-		flex-direction: column;
+	#intro {
+		width: 350px;
 	}
 
-	#beskrivelse {
-		display: flex;
-		flex-direction: column;
+	/*Gruppe med skuespiller bilder*/
+	.skuespiller {
+	font-size: 12px;
+	display: flex;
+	flex-direction: column;
+	width: 90px;
+	background-color: #f1f1f1;
+	padding: 4px;
+	height: 170px;
+	margin-bottom: 10px;
+	}
+
+	.skuespillerBilde{
+	height: 130px;
+	width: 90px;
 	}
 
 }
