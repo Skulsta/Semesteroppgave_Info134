@@ -96,23 +96,29 @@ function trailer() {
         }
     }
 
-    function anmeldelser() {
+    function karakter() {
+        var rating = 0;
+        /** Retrieves rating from reviews.js. */
         for (var key in reviews_object) {
-            if (key == movie_id) {
-                var review_details = review_object;
-                var element = document.createElement("p");
-                ratingContent = review_details["rating"];
-                
-                if (ratingContent == null) {
-                    ratingContent = " [ Ingen beskrivelse ] ";
-                }
-                else {
-                    element.textContent = ratingContent;
-                    review.appendChild(element);
-                }
+            if (key == query_params.id) {
+            if (!reviews_object.hasOwnProperty(key)) continue;
+
+            var object = reviews_object[key];
+            for (var property in object) {
+            if (!object.hasOwnProperty(property)) continue;
+
+            userinfo = object[property];
+
+            if (userinfo["rating"]) {
+            rating = (userinfo["rating"]);
+            } 
+            }
+            }
         }
+        ratingItem = document.createTextNode(" " + rating + "/6");
+
+        review.appendChild(ratingItem);
     }
-}
 
 /*
 function trailer() {
@@ -170,23 +176,24 @@ window.onload = function() {
     }
 
     // review object debug-table
-    /*
-    review_table = document.getElementById("review");
+    
+    review_table = document.getElementById("kommentar");
     for (key in review_object) {
 	left = document.createTextNode(key);
 	right = document.createTextNode(review_object[key]);
 	add_row(review_table, left, right);
 	for (subkey in review_object[key]) {
-	    left = document.createTextNode(" -> " + subkey);
+	    left = document.createTextNode(subkey);
 	    right = document.createTextNode(review_object[key][subkey]);
 	    add_row(review_table, left, right);
 	}
-    }**/
+    }
 
     addMoviePicture();
     trailer();
     description();
     skuespillere();
+    karakter();
     anmeldelser();
 
 };
