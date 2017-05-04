@@ -202,7 +202,7 @@ main {
 	border-radius: 15px;
 	order: 2;
 	margin-top: 5px;
-	width: 90px;
+	width: 75px;
 	height: 35px;
 	align-items: center;
 	justify-content: space-around;
@@ -312,10 +312,6 @@ a:visited {
 
 	}
 
-	#review {
-		margin-top: 10px;
-	}
-
 	#movie {
 		display: flex;
 		flex-direction: column-reverse;
@@ -356,7 +352,30 @@ footer {
 
 .forsideButtons {
 		flex-direction: row;
-	}
+}
+
+#review {
+	display: flex;
+	flex-direction: row;
+	padding: 2px;
+	background-color: #f1f1f1;
+	border-radius: 15px;
+	order: 1;
+	margin-top: 5px;
+	width: 75px;
+	height: 35px;
+	align-items: center;
+	justify-content: space-around;
+	font-family: helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+#kommentar {
+	padding: 1px;
+}
+
 
 /* Små mobilskjermer */
 @media (max-width: 374px) {
@@ -505,10 +524,6 @@ footer {
 		border-left: 2px solid;
 		border-color: lightgrey;
 		flex-direction: column;
-	}
-
-	#review {
-		margin-left:10px;
 	}
 
 	#beskrivelse {
