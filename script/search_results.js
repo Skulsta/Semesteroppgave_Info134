@@ -31,8 +31,7 @@ function mainSearch() {
 		if (movieCounter < 14) {
 			movie_details = movies_object[movie_id];
 			if ((movie_details["otitle"].toUpperCase()).includes(query_params.main_search.toUpperCase()))
-				results.push(movie_details);
-			addMoviePicture();
+				addMoviePicture();
 		}
 	}
 }
@@ -44,27 +43,6 @@ function searchForTitle() {
 			movie_details = movies_object[movie_id];
 			if ((movie_details["otitle"].toUpperCase()).includes(query_params.film_title.toUpperCase()))
 				addMoviePicture();
-		}
-	}
-}
-
-
-
-function searchForActor() {
-
-	if (results.lenght > 0) {
-		for (movie_id in results) {
-			movie_details = results[movie_id];
-			if (!(movie_details["folk"].toUpperCase()).includes(query_params.director.toUpperCase()))
-				results.splice(movie_id);
-		}
-	}
-
-	else {
-		for (movie_id in movies_object) {
-			movie_details = movies_object[movie_id];
-			if ((movie_details["folk"] != null) && (movie_details["folk"].toUpperCase()).includes(query_params.actor.toUpperCase()))
-				results.push(movie_id);
 		}
 	}
 }
@@ -96,70 +74,56 @@ function searchForDirector() {
 
 
 
-function sistReturnerte() {
-
-	for (movie_id in movies_object) {
-		for (var i = 0; i < 15; i++) {
-			if (movies_object[movie_id] != null)
-				addMoviePicture();
-		}	
-	}
-}
-
-
-
 function searchForCountry() {
 
 	for (movie_id in movies_object) {
-		if (movieCounter < 14) {
+		if (movieCounter < 12) {
 			movie_details = movies_object[movie_id];
-			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).includes(query_params.country.substring(0,3).toUpperCase()))
+			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).
+				includes(query_params.country.substring(0,3).toUpperCase())) {
 				addMoviePicture();
+			}
 		}
 	}
 }
 
 
+
 function searchForGenre() {
-
 	for (movie_id in genres_object) {
-		if (movieCounter < 14) {
-		movie_details = genres_object[movie_id];
-		if ((movie_details != null) && movie_details.includes(query_params.genre.toLowerCase()))
-		addMoviePicture();
-	}
+		if (movieCounter < 12) {
+			movie_details = movie_id;
+			movie_obj = genres_object[movie_id]
+			for (values in movie_obj) {
+				var genres = movie_obj[values];
+
+				if (genres === query_params.genre.toLowerCase()) {
+					addMoviePicture();
+				}
+			}
+		}
 	}
 }
 
 
 
-/* Her kan dere implementere en display function som viser resulatetene av søket. For eksempel:
-function display_X() {
-}
-*/
-/*
-	Denne metoden viser elementene på skjermen for brukeren
-	*/
+
+window.onload = function() {
+
+	query_params = get_query_string_parameters();
+
+	search_results = movies_object;
 
 
-
-
-	window.onload = function() {
-
-		query_params = get_query_string_parameters();
-
-		search_results = movies_object;
-
-
-		if (query_params.main_search) {
-			main_search = document.getElementById("main_search");
+	if (query_params.main_search) {
+		main_search = document.getElementById("main_search");
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
 		mainSearch();
 	}
 
 	
 	if (query_params.film_title) {
-        film_title = document.getElementById("film_title"); 	// <-- Not really necesarry.
+        film_title = document.getElementById("film_title"); 
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
 		searchForTitle();
 	}
