@@ -82,15 +82,11 @@ header {
 
 /** Advanced search form */
 
-fieldset {
-	padding-left: 30px;
-}
+
 
 .advancedSearch {
-	width: 150px;
 	height: 20px;
 	border: thin solid black;
-	padding-right: 100px;
 }
 
 .søkButton {
@@ -102,12 +98,11 @@ fieldset {
 }
 
 #avansertSøkForm {
-	width: 60%;
 	align-self: center;
 }
 
 #actor, #film_title, #director, #country, #genre {
-	width: 100%;
+	width: 100px;
 	margin-left: 10px;
 }
 
@@ -375,6 +370,8 @@ a {
 	.bruker {
 		display: none;
 	}
+
+
 }
 
 
@@ -391,6 +388,11 @@ fieldset {
 		flex-direction: column;
 		justify-content: space-between;
 
+	}
+
+	#avansertSøkForm {
+	width: 30vw;
+	align-self: center;
 	}
 
 	.bar {

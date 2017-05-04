@@ -23,8 +23,7 @@ function addMoviePicture() {
 }
 
 
-/* Mange funksjoner som gjør nesten helt det samme. Mulig dette kan gjøre enklere. Brukt toUpperCase for
-å gjøre søk case insensitive. Refaktorere ved å bruke insensitive, nevnt i forelesning. */
+/* Methods for each search field. Using toUpperCase to make searches case insencitive */
 function mainSearch() {
 
 	for (movie_id in movies_object) {
