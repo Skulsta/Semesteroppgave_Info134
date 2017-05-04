@@ -297,29 +297,9 @@ a:visited {
 		width: 90%;
 	}
 
-	#genre {
-		margin-top: 10px;
-		display: flex;
-		order: 3;
-		padding: 2px;
-		background-color: #f1f1f1;
-		border-radius: 15px;
-		margin-left: 10px;
-		height: 35px;
-		justify-content: center;
-		width: 90px;
-
-
-	}
-
 	#movie {
 		display: flex;
 		flex-direction: column-reverse;
-	}
-
-	#genreOgReview {
-		display: flex;
-		flex-direction: column;
 	}
 
 	#beskrivelse {
@@ -341,7 +321,7 @@ a:visited {
 
 footer {
 	background-color: #f1f1f1;
-	color: white;
+	color: darkgray;
 	border-top: 5px;
 	text-align: center;
 }
@@ -372,8 +352,15 @@ footer {
 	margin-right: 10px;
 }
 
+#genre {
+	font-family: helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
 #kommentar {
-	padding: 1px;
+	margin-left: 10px;
 }
 
 
@@ -524,6 +511,7 @@ footer {
 		border-left: 2px solid;
 		border-color: lightgrey;
 		flex-direction: column;
+		margin-bottom: 20px;
 	}
 
 	#beskrivelse {

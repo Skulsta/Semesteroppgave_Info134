@@ -45,16 +45,24 @@ function trailer() {
 
     if(trailerId == "") {
 
-    var description = document.createElement("p");
-        content = movie_details["description"];
-        description.id = "intro";
+        movie_id = query_params.id;
+        item_link = document.createElement("A");
 
-        if (content == null)
-            content = " [ Ingen beskrivelse ] ";
+        link_pic = document.createElement('img');
+            
 
-        if (content.length > 1)
-            description.textContent = content;
-            player.appendChild(description);
+        var pic_id = 0;
+        if (movie_id > 1000) 
+        pic_id = movie_id.toString().charAt(0);
+            
+
+        var src = 'http://nelson.uib.no/o/' + pic_id + '/' + movie_id + 'b.jpg';
+        link_pic.src = src;
+        link_pic.id = "cover"
+
+        item_link.appendChild(link_pic);
+
+        forsideBilde.appendChild(item_link); 
         }
         else {
             var video = document.createElement("iframe");
@@ -120,6 +128,61 @@ function trailer() {
         review.appendChild(ratingItem);
     }
 
+function anmeldelser() {
+    for (var key in reviews_object) {
+        if (key == movie_id) {
+            if (!reviews_object.hasOwnProperty(key)) continue;
+
+
+                var object = reviews_object[key];
+                for (var property in object) {
+                    if (!object.hasOwnProperty(property)) continue;
+
+                        userinfo = object[property];
+
+                        if (userinfo["rating"]) {
+                            rating = (userinfo["rating"]);
+                        }
+
+                        if (userinfo["username"]) {
+                            username = (userinfo["username"]);
+                        }
+
+                        if (userinfo["mod_date"]) {
+                            date = (userinfo["mod_date"]);
+                        }
+
+                        if (userinfo["comment"] != "") {
+                            comment = (userinfo["comment"]);
+                            paragraf = document.createElement("p");
+                            tekst = document.createTextNode("kommentar: " + comment);
+                            paragraf.appendChild(tekst);
+                        } else {
+                            paragraf = document.createElement("p");
+                            comment = document.createTextNode("Ingen kommentar");
+                            paragraf.appendChild(comment);
+                        }
+
+                        var kommentar = document.getElementById("kommentar");
+                        var br = document.createElement('br');
+
+                        var ratingItem = document.createTextNode(username + "'s rating: " + rating + "/6" + " ");
+                        kommentar.appendChild(br);
+                        var dato = document.createTextNode("Skrevet: " + date);
+                        kommentar.appendChild(br);
+                        
+                        kommentar.appendChild(ratingItem);
+
+                        kommentar.appendChild(dato);
+
+                        kommentar.appendChild(paragraf);
+                }
+                
+        }
+    }
+}
+
+
 /*
 function trailer() {
     var movie_id = movies_object[movie_id];
@@ -167,16 +230,24 @@ window.onload = function() {
         add_row(stats_table, left, right);
     }**/
     
+    //Henter ut rating fra review.js
+    tekst = document.createTextNode(":  " + genre_object);
+    document.getElementById("genre");
+    genre.appendChild(tekst);
+
+
     // add a "debug-table" on the bottom showing all genre info
-    genre_table = document.getElementById("genre");
+   /* genre_table = document.getElementById("genre");
     for (var i in genre_object) {
 		left = document.createTextNode(i);
 		right = document.createTextNode(genre_object);
 		add_row(genre_table, left, right);
     }
+    **/
 
     // review object debug-table
     
+    /*
     review_table = document.getElementById("kommentar");
     for (key in review_object) {
 	left = document.createTextNode(key);
@@ -188,6 +259,7 @@ window.onload = function() {
 	    add_row(review_table, left, right);
 	}
     }
+    **/
 
     addMoviePicture();
     trailer();
@@ -196,4 +268,4 @@ window.onload = function() {
     karakter();
     anmeldelser();
 
-};
+}
