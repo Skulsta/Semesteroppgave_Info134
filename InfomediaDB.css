@@ -345,6 +345,13 @@ a:visited {
 	padding-bottom: 5px;
 }
 
+
+fieldset {
+	background-color: #f1f1f1;
+	color: black;
+	display: flex;
+}
+
 footer {
 	background-color: #f1f1f1;
 	width: 100%;
@@ -370,16 +377,9 @@ a {
 	.bruker {
 		display: none;
 	}
-
-
 }
 
 
-fieldset {
-	background-color: #f1f1f1;
-	color: black;
-	display: flex;
-}
 
 @media (min-width: 768px) {
 
@@ -390,9 +390,16 @@ fieldset {
 
 	}
 
-	#avansertSøkForm {
-	width: 30vw;
-	align-self: center;
+	fieldset {
+	background-color: #f1f1f1;
+	color: black;
+	display: flex;
+	width: 40vw;
+}
+
+	.advancedSearch {
+	height: 20px;
+	border: thin solid black;
 	}
 
 	.bar {
