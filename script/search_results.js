@@ -77,7 +77,7 @@ function searchForDirector() {
 function searchForCountry() {
 
 	for (movie_id in movies_object) {
-		if (movieCounter < 12) {
+		if (movieCounter < 14) {
 			movie_details = movies_object[movie_id];
 			if ((movie_details["country"] != null) && (movie_details["country"].toUpperCase()).
 				includes(query_params.country.substring(0,3).toUpperCase())) {
@@ -91,7 +91,7 @@ function searchForCountry() {
 
 function searchForGenre() {
 	for (movie_id in genres_object) {
-		if (movieCounter < 12) {
+		if (movieCounter < 14) {
 			movie_details = movie_id;
 			movie_obj = genres_object[movie_id]
 			for (values in movie_obj) {
