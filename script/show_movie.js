@@ -16,6 +16,7 @@ function add_row(table, left, right) {
     table.appendChild(new_row);
 }
 
+//Legger til forside bilde
 function addMoviePicture() {
             movie_id = query_params.id;
             item_link = document.createElement("A");
@@ -38,7 +39,7 @@ function addMoviePicture() {
             forsideBilde.appendChild(item_link); 
 }
 
-
+//Viser trailer på filmsiden, viser bilde om trailer ikke er tilgjengelig.
 function trailer() {
     var movie_details = movies_object[movie_id];
     var trailerId = movie_details["youtube trailer id"];
@@ -104,6 +105,7 @@ function trailer() {
         }
     }
 
+    //Viser snittkarakter på filmsiden
     function karakter() {
         var rating = 0;
         /** Retrieves rating from reviews.js. */
@@ -128,6 +130,7 @@ function trailer() {
         review.appendChild(ratingItem);
     }
 
+//Viser brukernavn, vurdering, dato og kommentar på filmsiden.
 function anmeldelser() {
     for (var key in reviews_object) {
         if (key == movie_id) {
