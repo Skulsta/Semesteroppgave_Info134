@@ -102,8 +102,13 @@ fieldset {
 }
 
 #avansertSøkForm {
-	padding-right: 250px;
-	padding-left: 250px;
+	width: 60%;
+	align-self: center;
+}
+
+#actor, #film_title, #director, #country, #genre {
+	width: 100%;
+	margin-left: 10px;
 }
 
 
@@ -359,7 +364,7 @@ a {
 	color: black;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 381px) {
 
 	.forsideBilde {
 		height: 100px;
@@ -432,6 +437,10 @@ fieldset {
 		order: -1;
 	}
 
+	#actor, #film_title, #director, #country, #genre {
+		width: 125px;
+		margin-left: 10px;
+	}
 
 }
 
