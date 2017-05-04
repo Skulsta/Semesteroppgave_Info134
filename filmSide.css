@@ -2,6 +2,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	align-items: center;
 }
 
 .top {
@@ -12,7 +13,6 @@ body {
 
 header {
 	background-color: #f1f1f1;
-	color: white;
 }
 
 .avansert_sok {
@@ -174,7 +174,9 @@ main {
 	align-items: center;
 	margin-top: 5px;
 	order: 3;
-	margin-left: 10px;
+	border-style: solid;
+	border-color: darkgray;
+	border-width: 0.5px;
 }
 
 /*Box med vurdering og liste knapp*/
@@ -209,6 +211,9 @@ main {
 	font-family: helvetica;
 	font-size: 12px;
 	font-weight: bold;
+	border-style: solid;
+	border-color: darkgray;
+	border-width: 0.5px;
 }
 
 .forsideInnhold .vurdering:hover, .minListeButton:hover {
@@ -216,9 +221,7 @@ main {
 }
 
 .forsideInnhold {
-	order: -1;
 	display: flex;
-	flex-wrap: wrap;
 }
 
 a:link {
@@ -308,8 +311,8 @@ a:visited {
 	}
 
 	#bildeOgButtons {
+		flex-direction: row;
 		display: flex;
-		flex-direction: column;
 	}
 
 	#cover {
@@ -330,10 +333,6 @@ footer {
 	order: 5;
 }
 
-.forsideButtons {
-		flex-direction: row;
-}
-
 #review {
 	display: flex;
 	flex-direction: row;
@@ -350,6 +349,9 @@ footer {
 	font-size: 12px;
 	font-weight: bold;
 	margin-right: 10px;
+	border-style: solid;
+	border-color: darkgray;
+	border-width: 0.5px;
 }
 
 #genre {
@@ -363,9 +365,31 @@ footer {
 	margin-left: 10px;
 }
 
+#reviews {
+	display: flex;
+	border-left: 2px solid;
+	border-color: lightgrey;
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 300px;
+}
+
+#trailer {
+	width: 360px;
+	border: none;
+}
+
+#player {
+	width: 100px;
+}
+
 
 /* Små mobilskjermer */
-@media (max-width: 374px) {
+@media (max-width: 381px) {
+
+	header {
+		width: 100%;
+	}
 
 	#cover {
 		height: 150px;
@@ -379,25 +403,13 @@ footer {
 		display: none;
 	}
 
-	#bildeOgButtons {
-		flex-direction: row;
+	#trailer {
+		width: 300px;
 	}
 
-	.forsideButtons {
-		flex-direction: column;
-	}
-
-	.minListeButton{
-		margin-left: 0px;
-	}
 }
 
 @media (min-width: 768px) {
-
-	body {
-		
-		align-items: center;
-	}
 
 	main {
 		display: flex;
@@ -441,7 +453,6 @@ footer {
 	}
 
 	.forsideInnhold {
-		display: flex;
 		flex-direction: row;
 	}
 
@@ -482,11 +493,6 @@ footer {
 	#trailer {
 		width: 500px;
 		height: 275px;
-		border: none;
-	}
-
-	#intro {
-		width: 350px;
 	}
 
 	/*Gruppe med skuespiller bilder*/
@@ -512,15 +518,28 @@ footer {
 		border-color: lightgrey;
 		flex-direction: column;
 		margin-bottom: 20px;
+		width: 300px;
 	}
 
 	#beskrivelse {
-		width: 550px;
+		max-width: 550px;
 		margin-right: 20px;
 	}
 
 	.kommentarer {
 		margin-left: 10px;
+	}
+
+	.forsideButtons {
+		flex-direction: row;
+	}
+
+	#bildeOgButtons {
+		flex-direction: column;
+	}
+
+	#player {
+		width: 100%;
 	}
 
 }
