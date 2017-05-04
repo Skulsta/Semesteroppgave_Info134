@@ -21,6 +21,7 @@ header {
 	padding: 5px;
 }
 
+/*Bruker i headeren*/
 .bruker {
 	display: flex;
 	order: 3;
@@ -47,6 +48,7 @@ li {
 	list-style: none;
 }
 
+/*Logo/hjemknapp i header*/
 .meny {
 	display: flex;
 }
@@ -61,6 +63,7 @@ li {
 	background-color: darkgrey;
 }
 
+/*søkefunksjonen*/
 .searchInput {
 	border-radius: 15px;
 	border: 1px;
@@ -87,7 +90,7 @@ li {
 	order: 4;
 }
 
-
+/*Dropdown meny*/
 .dropDown {
 	position: relative;
 	display: inline-block;
@@ -150,6 +153,7 @@ main {
 	flex-direction: column;
 }
 
+/*hovedinnhold*/
 .mainSection {
 	display: flex;
 	background-color: white;
@@ -196,6 +200,7 @@ main {
 	width: 30px;
 }
 
+/*knapp til vurdering av film*/
 .vurdering {
 	display: flex;
 	flex-direction: row;
@@ -204,6 +209,7 @@ main {
 	border-radius: 15px;
 	order: 2;
 	margin-top: 5px;
+	margin-right: 10px;
 	width: 75px;
 	height: 35px;
 	align-items: center;
@@ -266,32 +272,12 @@ a:visited {
 	flex-direction: column;
 }
 
+/*submit til kommentarer*/
 #knapp {
 	width: 50px;
 	border-style: solid;
 }
 
-.aside {
-	display: flex;
-	order: 2;
-	justify-content: space-around;
-	
-}
-
-/*Gruppe med skuespiller bilder*/
-.skuespiller {
-	font-size: 12px;
-	display: flex;
-	flex-direction: column;
-	width: 50px;
-	background-color: #f1f1f1;
-	padding: 4px;
-}
-
-.skuespillerBilde{
-	height: 75px;
-	width: 50px;
-}
 
 	#tabell {
 		display: flex;
@@ -415,8 +401,6 @@ footer {
 	main {
 		display: flex;
 		flex-direction: row;
-		/*width: 768px;**/
-
 	}
 
 	header {
@@ -441,12 +425,6 @@ footer {
 	#forsideBilde {
 		display: flex;
 		flex-direction: row;
-	}
-
-	.info {
-		order: 1;
-		width: 440px;
-		
 	}
 
 	.infoFilm {
@@ -497,6 +475,7 @@ footer {
 		height: 275px;
 	}
 
+	/*boks med rating og kommentarer*/
 	#reviews {
 		display: flex;
 		border-left: 2px solid;
@@ -506,6 +485,7 @@ footer {
 		width: 300px;
 	}
 
+	/*info om filmen*/
 	#beskrivelse {
 		max-width: 550px;
 		margin-right: 20px;
@@ -515,18 +495,21 @@ footer {
 		margin-left: 10px;
 	}
 
+	/*knapper til vurdering og min liste*/
 	.forsideButtons {
 		flex-direction: row;
 	}
 
+	/*forside bilder og vurdering/min liste knapper*/
 	#bildeOgButtons {
 		flex-direction: column;
 	}
 
+	/*div til film trailer*/
 	#player {
 		width: 100%;
 	}
 
-	
+
 
 }
