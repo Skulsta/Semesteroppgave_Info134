@@ -15,7 +15,7 @@ function addMoviePicture(num) {
     main_bilder = document.createElement("section");
     main_bilder.className = "main_bilder";
 
-    var i = 0;          // Should make sure only 14 movies are shown at each category.
+    var i = 0;          // Should make sure only 5 movies are shown at each category.
     while (i < 5) {
      
      

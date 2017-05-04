@@ -1,7 +1,7 @@
 /** Javascript that will create basically the whole front page by
 creating new elements and adding information from the movies. */
 
-var movie_id = 1410; // Global variable so that the different categories don't just repeat the same movies.
+var movie_id = 2110; // Global variable so that the different categories don't just repeat the same movies.
 
 var left = document.getElementsByClassName("left");
 
