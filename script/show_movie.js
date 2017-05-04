@@ -81,7 +81,7 @@ function trailer() {
         }
     }
 
-    /** The movie description.*/
+    /** skriver ut skuespillere til en film.*/
     function skuespillere() {
         var movie_details = movie_object;
         var skuespillere = document.createElement("p");
@@ -95,6 +95,24 @@ function trailer() {
             folk.appendChild(skuespillere);
         }
     }
+
+    function anmeldelser() {
+        for (var key in reviews_object) {
+            if (key == movie_id) {
+                var review_details = review_object;
+                var element = document.createElement("p");
+                ratingContent = review_details["rating"];
+                
+                if (ratingContent == null) {
+                    ratingContent = " [ Ingen beskrivelse ] ";
+                }
+                else {
+                    element.textContent = ratingContent;
+                    review.appendChild(element);
+                }
+        }
+    }
+}
 
 /*
 function trailer() {
@@ -152,6 +170,7 @@ window.onload = function() {
     }
 
     // review object debug-table
+    /*
     review_table = document.getElementById("review");
     for (key in review_object) {
 	left = document.createTextNode(key);
@@ -162,11 +181,12 @@ window.onload = function() {
 	    right = document.createTextNode(review_object[key][subkey]);
 	    add_row(review_table, left, right);
 	}
-    }
+    }**/
 
     addMoviePicture();
     trailer();
     description();
     skuespillere();
+    anmeldelser();
 
 };
